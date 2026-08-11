@@ -1,6 +1,6 @@
 ---
 permalink: /
-title: "About Me"
+title: "SIC "
 excerpt: "Zhiheng Jin — robotics, modelling, planning, and control."
 author_profile: true
 redirect_from:
