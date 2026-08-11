@@ -26,10 +26,4 @@ I am also interested in using **computer vision** to support robotic perception 
 
 I grew up in Shandong, China. I received my Bachelor of Engineering degree in **Aircraft Design and Engineering** from **Shenyang Aerospace University**. I began my undergraduate studies in Mechanical Engineering before transferring to Aircraft Design and Engineering, a path that gave me a broad foundation in mechanics, aerospace systems, and robotics.
 
-## This Website
 
-This website is a record of my research and learning. Here I share projects, code, reading notes, technical ideas, and milestones from work in robotics and intelligent systems.
-
-I value curiosity, steady progress, and the discipline of turning ideas into systems that can be tested in the real world. I am always glad to connect with people interested in robotics, aerospace engineering, computer vision, or data-driven control.
-
-You can find my open-source work on [GitHub](https://github.com/zjin73).
