@@ -8,7 +8,7 @@ redirect_from:
   - /about.html
 ---
 
-# Hello, I'm Zhiheng Jin.
+# Hello, I'm Zhiheng Jin （Henry）
 
 I am a master's student at **Nanjing University of Aeronautics and Astronautics (NUAA)**, working on robot dynamics, modelling, planning, and control. My research focuses on robotic systems operating in complex environments, especially dual-arm manipulators for free-flying and space applications.
 
