@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title: "CV"
 permalink: /cv/
 author_profile: true
@@ -7,58 +7,43 @@ redirect_from:
   - /resume
 ---
 
-{% include base_path %}
+## Education
 
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
+**Master's student in Control Science and Engineering**
+Nanjing University of Aeronautics and Astronautics, China
+Expected graduation: **April 2027**.
 
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
+**Bachelor's degree in Aircraft Design and Engineering**
+Shenyang Aerospace University, China.
 
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
+## Research Experience
 
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
+### Multi-Arm Cooperative Motion Planning
 
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+Research involving coordinated motion planning for multiple robotic arms and generative trajectory planning using Diffusion and Flow Matching.
+
+### Model Predictive Control
+
+Research involving model predictive control for robotic trajectory tracking and control under constraints.
+
+### Data-Driven Dynamical Modeling and System Identification
+
+Research involving Koopman-based modeling of nonlinear dynamical systems and the use of learned models in predictive control.
+
+## Research Interests
+
+- Autonomous decision-making under uncertainty and POMDPs
+- Multi-agent cooperation
+- Learning-based robotic motion planning and generative trajectory planning
+- Model predictive control and intelligent control of complex dynamical systems
+- Data-driven dynamical modeling and system identification
+
+## Publications and Manuscripts
+
+**In process.** Manuscripts are in preparation or under review. These are not listed as published or accepted papers.
+
+[Publication status]({{ '/publications/' | relative_url }})
+
+## PhD Plans
+
+Seeking PhD opportunities for **2027 entry**.
