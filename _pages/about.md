@@ -1,6 +1,6 @@
 ---
 layout: researcher
-title: System Identification & Control
+title: Home
 permalink: /
 description: "Zhiheng Jin — system identification, multi-agent systems, agent + control, and complex systems."
 redirect_from:
