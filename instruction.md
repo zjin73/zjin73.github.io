@@ -6,7 +6,7 @@
 - 仓库：https://github.com/zjin73/zjin73.github.io
 - 当前发布分支：`master`
 - 发布检查：[Actions](https://github.com/zjin73/zjin73.github.io/actions)
-- 当前导航：Home → Research → Project → Service → Blog → Daily → News → CV。
+- 当前导航：Home → Research → Project → Service → Blog → Gallery → News → CV。
 
 **博客目录已创建：[直接打开 `_blogs/`](https://github.com/zjin73/zjin73.github.io/tree/master/_blogs)**。目录中有 [使用说明](_blogs/README.md) 和 [文章模板](_blogs/template.md)。名称前面的下划线不能省略。
 
@@ -52,9 +52,9 @@ GitHub 的 Markdown Preview 可以检查文章格式，但不等于完整网站�
 | 博客分类筛选逻辑 | [`assets/js/blog-filters.js`](assets/js/blog-filters.js) | 日常维护不用改 |
 | 博客文章的通用排版 | [`_layouts/notebook.html`](_layouts/notebook.html) | 影响所有新博客文章 |
 | Service 页面 | [`_pages/service.html`](_pages/service.html) | 编辑服务、教学等内容 |
-| Daily 页面 | [`_pages/daily.html`](_pages/daily.html) | 编辑日常文字、图片及图片说明 |
+| Gallery 页面 | [`_pages/gallery.html`](_pages/gallery.html) | 编辑日常文字、图片及图片说明 |
 | 首页照片 | [`assets/images/zhiheng-portrait.jpg`](assets/images/zhiheng-portrait.jpg) | 保持同名替换，或修改首页中的图片路径 |
-| Daily 等页面图片 | [`assets/images/`](assets/images/) | 上传图片后，在对应页面引用 |
+| Gallery 等页面图片 | [`assets/images/`](assets/images/) | 上传图片后，在对应页面引用 |
 | CV PDF 本体 | [`files/CV_Zhiheng-JIN.pdf`](files/CV_Zhiheng-JIN.pdf) | 上传新的同名 PDF |
 | CV 嵌入方式 | [`_pages/cv.md`](_pages/cv.md) | PDF 路径、缓存版本号和显示参数 |
 | 字体、字号、颜色、网格、间距、手机布局 | [`assets/css/researcher.css`](assets/css/researcher.css) | 样式修改集中在这里 |
@@ -139,7 +139,7 @@ published: true
 
 现有 Talk Tech 链接是科技类的外部博客入口，并没有自动把 Blogspot 中的所有文章搬到本仓库。随笔分类没有文章时，会正常显示空状态。
 
-## 5. 修改首页、Research、Project、Service 和 Daily
+## 5. 修改首页、Research、Project、Service 和 Gallery
 
 这些页面主要使用 HTML。文件名为 `.md` 的首页也包含 HTML。
 
@@ -163,7 +163,9 @@ Research 中仍要区分论文状态：
 
 新增同类条目时，可以复制该区域里一个完整的 `<article>...</article>`，再替换内容。复制时保留完整标签，不要给多个条目使用相同的 `id`。
 
-Daily 新增图片可以参考现有 `<figure>` 写法，照片放入 `assets/images/`，图片路径和文件名的大小写必须一致。为图片保留准确的 `alt` 说明。
+旧 `/daily/` 地址会自动跳转到 `/gallery/`；此跳转在 `_pages/gallery.html` 的 `redirect_from` 中设置。
+
+Gallery 新增图片可以参考现有 `<figure>` 写法，照片放入 `assets/images/`，图片路径和文件名的大小写必须一致。为图片保留准确的 `alt` 说明。
 
 ## 6. 更新 CV，并保留手机号遮黑
 

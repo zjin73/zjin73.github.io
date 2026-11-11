@@ -9,8 +9,8 @@ main:
     url: /service/
   - title: "Blog"
     url: /blogs/
-  - title: "Daily"
-    url: /daily/
+  - title: "Gallery"
+    url: /gallery/
   - title: "News"
     url: /news/
   - title: "CV"
