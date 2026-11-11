@@ -1,12 +1,12 @@
 main:
   - title: "Home"
     url: /
+  - title: "Service"
+    url: /service/
   - title: "Research"
     url: /research/
   - title: "Blog"
     url: /blogs/
-  - title: "Service"
-    url: /service/
   - title: "Daily"
     url: /daily/
   - title: "News"
