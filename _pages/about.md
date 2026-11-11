@@ -16,17 +16,18 @@ redirect_from:
 <img class="profile-photo" src="{{ '/assets/images/zhiheng-portrait.jpg' | relative_url }}" alt="Zhiheng Jin — photograph from his Google Sites homepage" width="1080" height="891">
 </section>
 <section class="interests" aria-labelledby="interests-title"><h2 id="interests-title">Research interests</h2><ul><li>System Identification</li><li>Multi-Agent Systems</li><li>Agent + Control</li><li>Complex Systems</li></ul></section>
-<section class="news-section" aria-labelledby="news-title"><h2 id="news-title">News</h2><p><time datetime="2026-11-11">2026.11.11</time><span lang="zh">个人网站搭建成功啦！</span></p></section>
-<div class="home-columns">
+<div class="home-overview">
+<section class="home-section news-column" aria-labelledby="news-title"><h2 id="news-title">News</h2><article class="news-item"><time datetime="2026-11-11">2026.11.11</time><p lang="zh">个人网站搭建成功啦！</p></article></section>
+<div class="background-column">
 <section class="home-section" aria-labelledby="education-title"><h2 id="education-title">Education</h2>
 <article class="record"><p class="record-meta">2024.09–Present</p><h3>Nanjing University of Aeronautics and Astronautics</h3><p>Master of Research in Control Science and Engineering</p><p class="record-meta">GPA: 85/100 · Supervisor: Dan Yu</p></article>
-<article class="record"><p class="record-meta">2021.02–2023.06</p><h3>Shenyang Aerospace University</h3><p>BEng in Aircraft Design and Engineering</p><p class="record-meta">GPA: 82/100</p></article>
+<article class="record"><p class="record-meta">2021.02–2023.06</p><h3>Shenyang Aerospace University</h3><p>BEng in Aircraft Design and Engineering</p><p class="record-meta">GPA: 82/100 · Supervisor: <a href="https://yjs.sau.edu.cn/info/1030/1233.htm">Yiming Du</a></p></article>
 <article class="record"><p class="record-meta">2019.09–2021.02</p><h3>Shenyang Aerospace University</h3><p>Mechanical Engineering, before transferring to Aircraft Design and Engineering.</p></article>
 </section>
 <section class="home-section" aria-labelledby="internships-title"><h2 id="internships-title">Internships</h2>
 <article class="record"><p class="record-meta">2025–Present</p><h3>Jiangsu Industrial Technology Research Institute</h3><p>Control models from experimental data, thermal finite element simulation, microchannel cooling optimization, and PID tuning for ceramic heating plates.</p></article>
 <article class="record"><p class="record-meta">2021</p><h3>Liaoning General Aviation Research Institute</h3><p>CAD preprocessing and lightweight optimization in SolidWorks and UG NX, drawing verification, and carbon-fiber aircraft component manufacturing.</p></article>
-</section></div>
-<section class="latest-row" aria-labelledby="papers-title"><h2 id="papers-title">Publications</h2><a href="{{ '/publications/#under-review' | relative_url }}">Manipulator Motion Planning via Reactive Flow-Diffusion and Refinement</a><span class="latest-status">Under Review</span></section>
-<section class="latest-row" aria-labelledby="projects-title"><h2 id="projects-title">Projects</h2><a href="{{ '/portfolio/#open-courses' | relative_url }}">Open courses — Agent Control and Grid</a></section>
+</section>
+</div>
+</div>
 <div class="cv-reference"><a href="{{ '/cv/' | relative_url }}">CV</a><span>Full academic and professional record · PDF</span></div>
