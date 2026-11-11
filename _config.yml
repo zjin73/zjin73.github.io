@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Zhiheng Jin | Control & Intelligent Systems"
+title                    : "SIC Lab | System Identification & Control"
 title_separator          : "-"
 name                     : &name "Zhiheng Jin"
-description              : &description "Zhiheng Jin — system identification, optimization, robotics, and control theory."
+description              : &description "Zhiheng Jin — system identification, multi-agent systems, agent + control, and complex systems."
 url                      : https://zjin73.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "zjin73/zjin73.github.io"
@@ -24,7 +24,7 @@ author:
   avatar           : "profile.png"
   name             : "Zhiheng Jin"
   pronouns         : # example: "she/her"  
-  bio              : "MSc student · Control, robotics & autonomy"
+  bio              : "MSc student · Identification, agents & complex systems"
   location         : "Nanjing, China"
   employer         : "Nanjing University of Aeronautics and Astronautics"
   uri              : # URL
@@ -57,7 +57,7 @@ author:
   keybase          : # Username
   instagram        : # Username
   lastfm           : # Username
-  linkedin         : # Username
+  linkedin         : "zjin73"
   mastodon         : # URL
   medium           : # URL
   pinterest        : # Username
@@ -65,12 +65,12 @@ author:
   steam            : # Username
   telegram         : # URL
   tumblr           : # Username
-  twitter          : # Username for X / Twitter
+  twitter          : "zjin73"
   vine             : # Username
   weibo            : # Username
   wikipedia        : # Username
   xing             : # Username
-  youtube          : # Username
+  youtube          : "@zjin73"
   zhihu            : # URL
 
 
