@@ -1,10 +1,10 @@
 main:
   - title: "Home"
     url: /
-  - title: "Service"
-    url: /service/
   - title: "Research"
     url: /research/
+  - title: "Service"
+    url: /service/
   - title: "Blog"
     url: /blogs/
   - title: "Daily"
