@@ -16,7 +16,6 @@ description: "Personal essays and notes on technology, control, and research by 
 {% assign post_category = post.category | default: 'technology' %}
 <article class="paper blog-entry" data-category="{{ post_category | escape }}"><div class="blog-meta"><span class="blog-tag">{% if post_category == 'personal' %}Personal essays{% else %}Technology{% endif %}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %d, %Y' }}</time></div><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>{% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}</article>
 {% endfor %}
-<article class="paper blog-entry" data-category="technology"><div class="blog-meta"><span class="blog-tag">Technology</span><span>External archive</span></div><h2><a href="https://zjin73tech.blogspot.com/">Talk Tech</a></h2><p>My existing notes on technology and control theory.</p></article>
 </section>
 <p class="empty-state" id="blog-empty" hidden>No posts in this category yet.</p>
 <p class="sr-only" id="blog-filter-status" role="status" aria-live="polite" aria-atomic="true"></p>

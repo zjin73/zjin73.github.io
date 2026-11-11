@@ -29,7 +29,7 @@
 | [Research](https://zjin73.github.io/research/) | [`_pages/research.html`](_pages/research.html) | 硕士阶段在前，本科在后；每个阶段放论文、专利等。硕士研究介绍为多机器人运动规划、生成式控制和 MPC。记录左侧状态/时间，右侧标题和作者；论文逐条标注 Under Review / Published，没有整体 Under Review 方框。 |
 | [Project](https://zjin73.github.io/projects/) | [`_pages/projects.html`](_pages/projects.html) | 两个简洁的纵向项目区块：先 Agent + Control，再 Control Theory Slides；标题直接链接对应 GitHub 仓库。 |
 | [Service](https://zjin73.github.io/service/) | [`_pages/service.html`](_pages/service.html) | Teaching（自动控制原理助教）和 Peer learning（线性代数、理论力学辅导）。已无 Community & extracurricular activities。 |
-| [Blog](https://zjin73.github.io/blogs/) | [`_pages/blogs.html`](_pages/blogs.html) + [`_blogs/`](_blogs/) | 顶部 All / Personal essays / Technology 分类筛选；文章按日期从新到旧；当前有一篇本地技术博客，以及 Talk Tech 外部旧博客入口。 |
+| [Blog](https://zjin73.github.io/blogs/) | [`_pages/blogs.html`](_pages/blogs.html) + [`_blogs/`](_blogs/) | 顶部 All / Personal essays / Technology 分类筛选；文章按日期从新到旧；只显示自己上传到 `_blogs/` 的文章，不再显示外部博客入口。 |
 | [Gallery](https://zjin73.github.io/gallery/) | [`_pages/gallery.html`](_pages/gallery.html) + [`assets/images/`](assets/images/) | Cooking 两张、Theatre 两张、Discussions & presentations 一张；照片下方配文字。没有活动履历列表，也不是轮播图。 |
 | [News](https://zjin73.github.io/news/) | [`_pages/news.html`](_pages/news.html) + [`_data/news.yml`](_data/news.yml) | 日期左、正文右的时间线，最新在前；目前只有“个人网站搭建成功啦！”。导航倒数第二。 |
 | [CV](https://zjin73.github.io/cv/) | [`_pages/cv.md`](_pages/cv.md) + [`files/CV_Zhiheng-JIN.pdf`](files/CV_Zhiheng-JIN.pdf) | 居中、有最大宽度限制的真实 PDF 阅读区域，当前 3 页，手机号已涂黑；页面没有额外引导区块。导航最后一个。 |
