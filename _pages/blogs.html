@@ -4,13 +4,13 @@ title: Blogs
 permalink: /blogs/
 description: "Research notes and technical writing by Zhiheng Jin on control, identification, optimization, and robotics."
 ---
-<header class="page-header"><div class="eyebrow">Blogs / Research notes</div><h1 class="page-title">Thinking through systems.</h1><p class="page-lead">A space for notes on system identification, optimization, control theory, and intelligent robotics.</p></header>
-<section class="content-section"><p>My existing notes on technology and control theory are on <a href="https://zjin73tech.blogspot.com/">Talk Tech <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13L13 3M3 3h10v10"/></svg></a>.</p><h2>Latest posts</h2>
+<header class="page-header"><h1 class="page-title">Blogs</h1></header>
+<section class="content-section"><p>My existing notes on technology and control theory are on <a href="https://zjin73tech.blogspot.com/">Talk Tech </a>.</p><h2>Latest posts</h2>
 {% assign blog_posts = site.blogs | sort: 'date' | reverse %}
 {% for post in blog_posts %}
-<article class="paper"><div class="card-type">{{ post.date | date: '%B %d, %Y' }}</div><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p>{{ post.description | escape }}</p><a href="{{ post.url | relative_url }}">Read article <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13L13 3M3 3h10v10"/></svg></a></article>
+<article class="paper"><div class="card-type">{{ post.date | date: '%B %d, %Y' }}</div><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p>{{ post.description | escape }}</p><a href="{{ post.url | relative_url }}">Read article </a></article>
 {% else %}
-<div class="empty-state"><span class="empty-icon" aria-hidden="true">[ ]</span><h3>The notebook starts here.</h3><p>No posts published yet. Future entries will appear here as they are added.</p></div>
+<p class="empty-state">No posts here yet.</p>
 {% endfor %}
 </section>
-<section class="content-section"><h2>Research topics</h2><div class="interest-list"><span>System Identification</span><span>Control Theory</span><span>Optimization</span><span>Robotics</span><span>Machine Learning</span></div></section>
+
