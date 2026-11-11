@@ -1,12 +1,16 @@
-# Ignore the contents of the _site directory
 _site/
-
-# Ignore the directory for local files during development
-local/
-
-# Ignore the Gemfile that is generated
+.jekyll-cache/
+.jekyll-metadata
+.sass-cache/
+.bundle/
+vendor/
 Gemfile.lock
+local/
+tmp/
+node_modules/
+.DS_Store
 
-# Ingore files created by npm
-node_modules
-package-lock.json
+# Local preview helpers are not part of the deployed source.
+.openai/
+preview/
+preview_render.py

@@ -1,42 +1,38 @@
+# SIC Lab
 
-# Academic Pages
+System Identification & Control — Zhiheng Jin 的个人学术网站。
 
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
+**网站：[zjin73.github.io](https://zjin73.github.io/)**
 
-Academic Pages is a Github Pages template for academic websites.
+## 修改入口
 
+| 要做什么 | 打开这里 |
+| --- | --- |
+| 查看完整维护教程 | [instruction.md](instruction.md) |
+| 发布个人随笔或科技文章 | [_blogs/](https://github.com/zjin73/zjin73.github.io/tree/master/_blogs) · [文章模板](_blogs/template.md) |
+| 修改首页、教育和实习 | [_pages/about.md](_pages/about.md) |
+| 更新论文、专利和项目 | [_pages/research.html](_pages/research.html) |
+| 发布 News | [_data/news.yml](_data/news.yml) |
+| 修改 Service / Daily | [Service](_pages/service.html) · [Daily](_pages/daily.html) |
+| 替换 CV | [files/CV_Zhiheng-JIN.pdf](files/CV_Zhiheng-JIN.pdf) |
+| 调整导航 | [_data/navigation.yml](_data/navigation.yml) |
+| 调整视觉样式 | [assets/css/researcher.css](assets/css/researcher.css) |
 
-# Getting Started
+## 发布方式
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Set site-wide configuration and add your content.
-1. Upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.  
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+网站由 Jekyll 和 GitHub Pages 构建。修改提交到 `master` 后，查看 [Actions](https://github.com/zjin73/zjin73.github.io/actions) 中的构建和部署状态。
 
-See more info at https://academicpages.github.io/
+新文章放在 `_blogs/`，分类使用 `personal` 或 `technology`。目录中的说明和模板不会作为文章发布。
 
-## Running Locally
+## 保留的结构
 
-When you are initially working your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+| 目录 | 用途 |
+| --- | --- |
+| `_blogs/` | 博客正文、说明和模板 |
+| `_pages/` | 当前网页及 404 页面 |
+| `_layouts/` | 通用网页布局、博客正文布局 |
+| `_data/` | 导航与 News 数据 |
+| `assets/` | 当前 CSS、分类筛选脚本和照片 |
+| `files/` | 当前 CV PDF |
 
-1. Clone the repository and made updates as detailed above.
-1. Make sure you have ruby-dev, bundler, and nodejs installed: `sudo apt install ruby-dev ruby-bundler nodejs`
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change.
-
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
-
-# Maintenance 
-
-Bug reports and feature requests to the template  should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
-
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii) and additional maintainers would be welcomed.
-
-## Bugfixes and enhancements
-
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of template to your fork as well.
-
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize. If you want to save your various .yml configuration files and markdown files, you can delete the repository and fork it again. Or you can manually patch.
+旧 Academic Pages 示例内容、未使用的主题组件、示例 PDF、旧图片和演讲地图工具已从当前分支清理。Git 历史仍保留原记录。保留原项目的 [LICENSE](LICENSE) 声明。

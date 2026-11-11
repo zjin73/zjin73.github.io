@@ -8,6 +8,8 @@
 - 发布检查：[Actions](https://github.com/zjin73/zjin73.github.io/actions)
 - 当前导航：Home → Research → Blog → Service → Daily → News → CV。
 
+**博客目录已创建：[直接打开 `_blogs/`](https://github.com/zjin73/zjin73.github.io/tree/master/_blogs)**。目录中有 [使用说明](_blogs/README.md) 和 [文章模板](_blogs/template.md)。名称前面的下划线不能省略。
+
 日常修改的流程是：找到文件 → 编辑或上传 → 提交到 `master` → 等待 GitHub Pages 发布成功 → 检查网站。
 
 ## 1. 最常用的修改方法：直接在 GitHub 网页操作
@@ -44,7 +46,7 @@ GitHub 的 Markdown Preview 可以检查文章格式，但不等于完整网站�
 | 论文、专利、项目、Open courses | [`_pages/research.html`](_pages/research.html) | Publications 在最前，之后为 Patents 和 Projects |
 | 添加或修改 News 内容 | [`_data/news.yml`](_data/news.yml) | 修改数据，首页和 News 汇总页会自动读取 |
 | News 汇总页的布局 | [`_pages/news.html`](_pages/news.html) | 添加消息时通常不需要修改这个文件 |
-| 新增博客正文 | `_blogs/文章文件名.md` | 每篇文章一个 Markdown 文件；目录不存在时随第一篇文章创建 |
+| 新增博客正文 | [`_blogs/`](https://github.com/zjin73/zjin73.github.io/tree/master/_blogs) 下的文章 `.md` 文件 | 每篇文章一个文件，可复制 `template.md` 后新建 |
 | Blog 列表和分类按钮 | [`_pages/blogs.html`](_pages/blogs.html) | 日常发文章不用改这个文件 |
 | 博客分类筛选逻辑 | [`assets/js/blog-filters.js`](assets/js/blog-filters.js) | 日常维护不用改 |
 | 博客文章的通用排版 | [`_layouts/notebook.html`](_layouts/notebook.html) | 影响所有新博客文章 |
@@ -55,11 +57,11 @@ GitHub 的 Markdown Preview 可以检查文章格式，但不等于完整网站�
 | CV PDF 本体 | [`files/CV_Zhiheng-JIN.pdf`](files/CV_Zhiheng-JIN.pdf) | 上传新的同名 PDF |
 | CV 嵌入方式 | [`_pages/cv.md`](_pages/cv.md) | PDF 路径、缓存版本号和显示参数 |
 | 字体、字号、颜色、网格、间距、手机布局 | [`assets/css/researcher.css`](assets/css/researcher.css) | 样式修改集中在这里 |
-| 网站名称、顶部导航、页脚、通用页面框架 | [`_layouts/researcher.html`](_layouts/researcher.html) | 当前页面实际使用的导航写在这里 |
-| 导航配置 | [`_data/navigation.yml`](_data/navigation.yml) | 导航变动时与上一个文件同步 |
+| 网站名称、页脚、通用页面框架 | [`_layouts/researcher.html`](_layouts/researcher.html) | 页面框架读取 `_data/navigation.yml` 生成导航 |
+| 导航配置 | [`_data/navigation.yml`](_data/navigation.yml) | 导航名称、顺序、地址统一在这里修改 |
 | Jekyll 全站配置 | [`_config.yml`](_config.yml) | 日常改文字、发 News 和博客时通常不用动 |
 
-仓库保留了 Academic Pages 模板的旧文件。当前 Research 页面直接写在 `_pages/research.html` 中，**往旧 `_publications/` 或 `_portfolio/` 目录添加文件，不会自动更新当前 Research 列表**。当前 Blog 使用 `_blogs/`，不要把新博客放到旧 `_posts/` 中。
+旧模板的示例论文、博客、演讲、教学、主题组件和未使用资源已从当前分支清理。当前 Research 直接维护 `_pages/research.html`，博客正文统一放在 `_blogs/`。不需要重新建立旧 `_publications/`、`_portfolio/` 或 `_posts/` 目录。
 
 原 `/portfolio/` 和 `/publications/` 地址已跳转至 `/research/`。这个设置在 `_pages/research.html` 开头的 `redirect_from` 中，保留即可。
 
@@ -87,6 +89,8 @@ GitHub 的 Markdown Preview 可以检查文章格式，但不等于完整网站�
 
 ## 4. 发布博客：个人随笔或科技文章
 
+可以先打开 [博客目录](https://github.com/zjin73/zjin73.github.io/tree/master/_blogs) 和 [文章模板](_blogs/template.md)，复制模板内容新建文件。**在 `_blogs/` 目录里创建时只填文件名；在仓库根目录创建时才填 `_blogs/文件名.md`。**
+
 在仓库根目录选择 **Add file → Create new file**，把文件名填成：
 
 ```text
@@ -104,6 +108,7 @@ title: "我的第一篇随笔"
 date: 2026-11-11
 category: personal
 description: "这里写一句话，介绍这篇文章。"
+published: true
 ---
 
 这里开始写正文。
@@ -119,6 +124,8 @@ description: "这里写一句话，介绍这篇文章。"
 ```
 
 顶部两条 `---` 之间是文章信息，请保留它们。
+
+仓库中的 `template.md` 默认 `published: false`。复制到新文件并写好内容后，改为 `published: true`。`README.md` 和 `template.md` 都已在 `_config.yml` 中排除，模板文件本身不会被发布。
 
 | 文章类型 | 必须填写的分类值 | 网站显示标签 |
 | --- | --- | --- |
@@ -174,7 +181,7 @@ Daily 新增图片可以参考现有 `<figure>` 写法，照片放入 `assets/im
 
 ## 7. 修改导航和视觉样式
 
-当前站点使用自定义布局，实际导航链接在 `_layouts/researcher.html` 中。修改导航名称、顺序或地址时，修改这里，并同步 `_data/navigation.yml`。只改后者不会改变当前页面的导航。
+导航统一由 `_data/navigation.yml` 控制。修改名称、顺序或地址时，只编辑这个文件即可；`_layouts/researcher.html` 会自动读取它，当前页面的选中状态也会自动更新。
 
 保留现有设计方向时，可以按以下规则维护：
 
@@ -203,7 +210,7 @@ CSS 修改后，可以同步更新 `_layouts/researcher.html` 中样式表链接
 - 使用浏览器强制刷新，或者在地址后加一个新的查询参数，例如 `?v=check1`，检查是否是缓存问题。
 - PDF 和 CSS 仍显示旧内容时，检查前文提到的文件版本参数。
 
-如果 Blog 新文章没有出现，依次检查：文件是否在 `_blogs/`、扩展名是否为 `.md`、开头是否有完整的两条 `---`、字段缩进和引号是否正确、分类值是否为 `personal` 或 `technology`。
+如果 Blog 新文章没有出现，先检查它不是被排除的 `template.md`，并且 `published` 不是 `false`；然后依次检查：文件是否在 `_blogs/`、扩展名是否为 `.md`、开头是否有完整的两条 `---`、字段缩进和引号是否正确、分类值是否为 `personal` 或 `technology`。
 
 ## 9. 修改出错时怎样恢复
 

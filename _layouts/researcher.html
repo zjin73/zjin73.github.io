@@ -19,13 +19,15 @@
 <header class="site-header"><div class="wrap header-inner">
 <a class="brand" href="{{ '/' | relative_url }}" aria-label="SIC Lab, home"><span class="brand-text"><span class="brand-title">SIC Lab</span><span class="brand-subtitle">System Identification &amp; Control</span></span></a>
 <nav id="navigation" aria-label="Main navigation">
-<a href="{{ '/' | relative_url }}" {% if page.url == '/' %}aria-current="page"{% endif %}>Home</a>
-<a href="{{ '/research/' | relative_url }}" {% if page.url == '/research/' %}aria-current="page"{% endif %}>Research</a>
-<a href="{{ '/blogs/' | relative_url }}" {% if page.url contains '/blogs/' %}aria-current="page"{% endif %}>Blog</a>
-<a href="{{ '/service/' | relative_url }}" {% if page.url == '/service/' %}aria-current="page"{% endif %}>Service</a>
-<a href="{{ '/daily/' | relative_url }}" {% if page.url == '/daily/' %}aria-current="page"{% endif %}>Daily</a>
-<a href="{{ '/news/' | relative_url }}" {% if page.url == '/news/' %}aria-current="page"{% endif %}>News</a>
-<a href="{{ '/cv/' | relative_url }}" {% if page.url == '/cv/' %}aria-current="page"{% endif %}>CV</a>
+{% for item in site.data.navigation.main %}
+{% assign nav_active = false %}
+{% if page.url == item.url %}
+{% assign nav_active = true %}
+{% elsif item.url == '/blogs/' %}
+{% if page.url contains '/blogs/' %}{% assign nav_active = true %}{% endif %}
+{% endif %}
+<a href="{{ item.url | relative_url }}" {% if nav_active %}aria-current="page"{% endif %}>{{ item.title | escape }}</a>
+{% endfor %}
 </nav></div></header>
 <main id="main" class="wrap">{{ content }}</main>
 <footer class="wrap footer"><span>© {{ 'now' | date: '%Y' }} Zhiheng Jin</span></footer>
