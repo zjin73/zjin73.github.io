@@ -17,6 +17,7 @@ include:
 exclude:
   - README.md
   - instruction.md
+  - docs
   - LICENSE
   - Gemfile
   - Gemfile.lock
@@ -51,3 +52,4 @@ defaults:
 plugins:
   - jekyll-redirect-from
   - jekyll-sitemap
+

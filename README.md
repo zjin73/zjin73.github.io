@@ -1,38 +1,23 @@
-# Personal Pages
+# Zhiheng Jin — personal website
 
+个人网站：**[zjin73.github.io](https://zjin73.github.io/)**。本仓库 `zjin73/zjin73.github.io` 使用 Jekyll 和 GitHub Pages，从 `master` 分支发布。
 
+**维护从这里开始：[instruction.md — 完整中文维护手册](instruction.md)**。包含导航与源码对应表、当前页面样貌、现有图片/PDF 清单，以及本地写作、手动上传、发布检查和恢复误改的方法。
 
-**网站：[zjin73.github.io](https://zjin73.github.io/)**
-
-## 修改入口
-
-| 要做什么 | 打开这里 |
+| 常用操作 | 入口 |
 | --- | --- |
-| 查看完整维护教程 | [instruction.md](instruction.md) |
-| 发布个人随笔或科技文章 | [_blogs/](https://github.com/zjin73/zjin73.github.io/tree/master/_blogs) · [文章模板](_blogs/template.md) |
-| 修改首页、教育和实习 | [_pages/about.md](_pages/about.md) |
-| 更新论文、专利和项目 | [_pages/research.html](_pages/research.html) |
-| 发布 News | [_data/news.yml](_data/news.yml) |
-| 修改 Service / Daily | [Service](_pages/service.html) · [Daily](_pages/daily.html) |
-| 替换 CV | [files/CV_Zhiheng-JIN.pdf](files/CV_Zhiheng-JIN.pdf) |
-| 调整导航 | [_data/navigation.yml](_data/navigation.yml) |
-| 调整视觉样式 | [assets/css/researcher.css](assets/css/researcher.css) |
+| 写新博客 | [`_blogs/`](_blogs/) · [写作模板](_blogs/template.md) · [博客说明](_blogs/README.md) |
+| Gallery 加照片 | 上传至 [`assets/images/`](assets/images/)，再编辑 [`_pages/gallery.html`](_pages/gallery.html) |
+| 发布 News | 编辑 [`_data/news.yml`](_data/news.yml)；首页最新 3 条，News 页面显示全部 |
+| 更新首页信息 | [`_pages/about.md`](_pages/about.md) |
+| 更新研究成果 | [`_pages/research.html`](_pages/research.html) |
+| 更新项目/课件链接 | [`_pages/projects.html`](_pages/projects.html) |
+| 更新教学服务 | [`_pages/service.html`](_pages/service.html) |
+| 更换真实 CV | [`files/CV_Zhiheng-JIN.pdf`](files/CV_Zhiheng-JIN.pdf)，同时更新 [`_pages/cv.md`](_pages/cv.md) 的版本号 |
+| 调整导航 | [`_data/navigation.yml`](_data/navigation.yml) |
+| 查看当前样貌 | [八个页面的截图与说明](docs/appearance.md) |
+| 检查发布结果 | [GitHub Actions](https://github.com/zjin73/zjin73.github.io/actions) |
 
-## 发布方式
+当前导航：Home · Research · Project · Service · Blog · Gallery · News · CV。顶部没有网站品牌标题。整体为浅灰网格背景、蓝色强调、清晰的大字号和简洁直线布局。
 
-网站由 Jekyll 和 GitHub Pages 构建。修改提交到 `master` 后，查看 [Actions](https://github.com/zjin73/zjin73.github.io/actions) 中的构建和部署状态。
-
-新文章放在 `_blogs/`，分类使用 `personal` 或 `technology`。目录中的说明和模板不会作为文章发布。
-
-## 保留的结构
-
-| 目录 | 用途 |
-| --- | --- |
-| `_blogs/` | 博客正文、说明和模板 |
-| `_pages/` | 当前网页及 404 页面 |
-| `_layouts/` | 通用网页布局、博客正文布局 |
-| `_data/` | 导航与 News 数据 |
-| `assets/` | 当前 CSS、分类筛选脚本和照片 |
-| `files/` | 当前 CV PDF |
-
-旧 Academic Pages 示例内容、未使用的主题组件、示例 PDF、旧图片和演讲地图工具已从当前分支清理。Git 历史仍保留原记录。保留原项目的 [LICENSE](LICENSE) 声明。
+新博客需要新文件名，并设置 `published: true`；新照片上传后还需添加 Gallery 展示条目。同路径同名上传只替换对应文件。完整步骤与可复制示例以 [instruction.md](instruction.md) 为准。
