@@ -1,9 +1,13 @@
 main:
-  - title: "About"
+  - title: "Home"
     url: /
   - title: "Research"
     url: /portfolio/
-  - title: "Writing"
+  - title: "Publications"
     url: /publications/
   - title: "CV"
     url: /cv/
+  - title: "Blogs"
+    url: /blogs/
+  - title: "Service"
+    url: /service/

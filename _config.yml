@@ -8,10 +8,10 @@
 
 # Basic Site Settings
 locale                   : "en-US"
-title                    : "Zhiheng Jin | Control, Robotics & Autonomy"
+title                    : "Zhiheng Jin | Control & Intelligent Systems"
 title_separator          : "-"
 name                     : &name "Zhiheng Jin"
-description              : &description "Zhiheng Jin — control, robotics, and autonomous decision-making."
+description              : &description "Zhiheng Jin — system identification, optimization, robotics, and control theory."
 url                      : https://zjin73.github.io # the base hostname & protocol for your site e.g. "https://mmistakes.github.io"
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "zjin73/zjin73.github.io"
@@ -28,7 +28,7 @@ author:
   location         : "Nanjing, China"
   employer         : "Nanjing University of Aeronautics and Astronautics"
   uri              : # URL
-  email            : "zjin73@outlook.com" 
+  email            : "zjin73@nuaa.edu.cn" 
 
   # Academic websites
   arxiv            : # URL - Update with the correct link to your profile
@@ -225,6 +225,9 @@ kramdown:
 
 # Collections
 collections:
+  blogs:
+    output: true
+    permalink: /blogs/:path/
   teaching:
     output: true
     permalink: /:collection/:path/
@@ -241,6 +244,11 @@ collections:
 
 # Defaults
 defaults:
+  - scope:
+      path: ""
+      type: blogs
+    values:
+      layout: notebook
   # _posts
   - scope:
       path: ""
