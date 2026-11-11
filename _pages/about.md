@@ -16,6 +16,7 @@ redirect_from:
 <img class="profile-photo" src="{{ '/assets/images/zhiheng-portrait.jpg' | relative_url }}" alt="Zhiheng Jin — photograph from his Google Sites homepage" width="1080" height="891">
 </section>
 <section class="interests" aria-labelledby="interests-title"><h2 id="interests-title">Research interests</h2><ul><li>System Identification</li><li>Multi-Agent Systems</li><li>Agent + Control</li><li>Complex Systems</li></ul></section>
+<section class="news-section" aria-labelledby="news-title"><h2 id="news-title">News</h2><p><time datetime="2026-11-11">2026.11.11</time><span lang="zh">个人网站搭建成功啦！</span></p></section>
 <div class="home-columns">
 <section class="home-section" aria-labelledby="education-title"><h2 id="education-title">Education</h2>
 <article class="record"><p class="record-meta">2024.09–Present</p><h3>Nanjing University of Aeronautics and Astronautics</h3><p>Master of Research in Control Science and Engineering</p><p class="record-meta">GPA: 85/100 · Supervisor: Dan Yu</p></article>
@@ -26,14 +27,6 @@ redirect_from:
 <article class="record"><p class="record-meta">2025–Present</p><h3>Jiangsu Industrial Technology Research Institute</h3><p>Control models from experimental data, thermal finite element simulation, microchannel cooling optimization, and PID tuning for ceramic heating plates.</p></article>
 <article class="record"><p class="record-meta">2021</p><h3>Liaoning General Aviation Research Institute</h3><p>CAD preprocessing and lightweight optimization in SolidWorks and UG NX, drawing verification, and carbon-fiber aircraft component manufacturing.</p></article>
 </section></div>
-<div class="home-columns research-columns">
-<section class="home-section" aria-labelledby="papers-title"><div class="section-title"><h2 id="papers-title">Publications</h2><a href="{{ '/publications/' | relative_url }}">Full list</a></div>
-<article class="record"><p class="record-status">Under Review</p><h3>Manipulator Motion Planning via Reactive Flow-Diffusion and Refinement</h3><p class="record-meta">Zhiheng Jin, Dan Yu</p><p>Submitted to PIMechE Part I: Journal of Systems and Control Engineering.</p></article>
-<article class="record"><p class="record-status">Under Review</p><h3>Disturbance Prediction-based Koopman Bilinear Model Predictive Control for Control-Affine Systems</h3><p class="record-meta">Dan Yu, Hongyu Zhu, Zhiheng Jin</p><p>Submitted to IEEE Robotics and Automation Letters, 2026.</p></article>
-</section>
-<section class="home-section" aria-labelledby="projects-title"><div class="section-title"><h2 id="projects-title">Selected projects</h2><a href="{{ '/portfolio/' | relative_url }}">Details</a></div>
-<article class="record"><p class="record-meta">2024 · Robotics</p><h3>Intelligent robotic arm for a digital drilling and workover platform</h3><p>Visual servoing, cooperative transport, and compliant control.</p></article>
-<article class="record"><p class="record-meta">2024 · UAV inspection</p><h3>Power transmission line inspection using UAV swarms</h3><p>YOLO-based defect detection and field testing.</p></article>
-<article class="record"><p class="record-meta">2021 · Measurement</p><h3>Microfluidic-based viscosity measurement</h3><p>Microfluidic chips and motor-driven mechanical propulsion.</p></article>
-</section></div>
+<section class="latest-row" aria-labelledby="papers-title"><h2 id="papers-title">Publications</h2><a href="{{ '/publications/#under-review' | relative_url }}">Manipulator Motion Planning via Reactive Flow-Diffusion and Refinement</a><span class="latest-status">Under Review</span></section>
+<section class="latest-row" aria-labelledby="projects-title"><h2 id="projects-title">Projects</h2><a href="{{ '/portfolio/#open-courses' | relative_url }}">Open courses — Agent Control and Grid</a></section>
 <div class="cv-reference"><a href="{{ '/cv/' | relative_url }}">CV</a><span>Full academic and professional record · PDF</span></div>
