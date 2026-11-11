@@ -1,6 +1,6 @@
-# SIC Lab
+# Personal Pages
 
-System Identification & Control — Zhiheng Jin 的个人学术网站。
+
 
 **网站：[zjin73.github.io](https://zjin73.github.io/)**
 
