@@ -22,7 +22,7 @@ redirect_from:
 <section class="home-section" aria-labelledby="education-title"><h2 id="education-title">Education</h2>
 <article class="record"><p class="record-meta">2024.09–Present</p><h3>Nanjing University of Aeronautics and Astronautics</h3><p>Master of Research in Control Science and Engineering</p><p class="record-meta">GPA: 85/100 · Supervisor: Dan Yu</p></article>
 <article class="record"><p class="record-meta">2021.02–2023.06</p><h3>Shenyang Aerospace University</h3><p>BEng in Aircraft Design and Engineering</p><p class="record-meta">GPA: 82/100 · Supervisor: <a href="https://yjs.sau.edu.cn/info/1030/1233.htm">Yiming Du</a></p></article>
-<article class="record"><p class="record-meta">2019.09–2021.02</p><h3>Shenyang Aerospace University</h3><p>Mechanical Engineering, before transferring to Aircraft Design and Engineering.</p></article>
+<article class="record"><p class="record-meta">2019.09–2021.02</p><h3>Shenyang Aerospace University</h3><p>Mechanical Engineering.</p></article>
 </section>
 <section class="home-section" aria-labelledby="internships-title"><h2 id="internships-title">Internships</h2>
 <article class="record"><p class="record-meta">2025–Present</p><h3>Jiangsu Industrial Technology Research Institute</h3><p>Control models from experimental data, thermal finite element simulation, microchannel cooling optimization, and PID tuning for ceramic heating plates.</p></article>
