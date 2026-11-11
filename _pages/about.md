@@ -25,8 +25,8 @@ redirect_from:
 <article class="record"><p class="record-meta">2019.09–2021.02</p><h3>Shenyang Aerospace University</h3><p>Mechanical Engineering.</p></article>
 </section>
 <section class="home-section" aria-labelledby="internships-title"><h2 id="internships-title">Internships</h2>
-<article class="record"><p class="record-meta">2025–Present</p><h3>Jiangsu Industrial Technology Research Institute</h3><p>Control models from experimental data, thermal finite element simulation, microchannel cooling optimization, and PID tuning for ceramic heating plates.</p></article>
-<article class="record"><p class="record-meta">2021</p><h3>Liaoning General Aviation Research Institute</h3><p>CAD preprocessing and lightweight optimization in SolidWorks and UG NX, drawing verification, and carbon-fiber aircraft component manufacturing.</p></article>
+<article class="record"><p class="record-meta">2025–Present</p><h3>Jiangsu Industrial Technology Research Institute</h3><p>Intern</p></article>
+<article class="record"><p class="record-meta">2021</p><h3>Liaoning General Aviation Research Institute</h3><p>Intern</p></article>
 </section>
 </div>
 </div>
