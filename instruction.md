@@ -6,7 +6,7 @@
 - 仓库：https://github.com/zjin73/zjin73.github.io
 - 当前发布分支：`master`
 - 发布检查：[Actions](https://github.com/zjin73/zjin73.github.io/actions)
-- 当前导航：Home → Research → Blog → Service → Daily → News → CV。
+- 当前导航：Home → Research → Project → Service → Blog → Daily → News → CV。
 
 **博客目录已创建：[直接打开 `_blogs/`](https://github.com/zjin73/zjin73.github.io/tree/master/_blogs)**。目录中有 [使用说明](_blogs/README.md) 和 [文章模板](_blogs/template.md)。名称前面的下划线不能省略。
 
@@ -43,7 +43,8 @@ GitHub 的 Markdown Preview 可以检查文章格式，但不等于完整网站�
 | 修改目标 | 文件或目录 | 使用方式 |
 | --- | --- | --- |
 | 首页介绍、研究兴趣、邮箱、社交链接、教育、实习 | [`_pages/about.md`](_pages/about.md) | 主要是 HTML，编辑对应文字 |
-| 论文、专利、项目、Open courses | [`_pages/research.html`](_pages/research.html) | Publications 在最前，之后为 Patents 和 Projects |
+| 论文、专利、毕业论文 | [`_pages/research.html`](_pages/research.html) | 硕士阶段在前，本科阶段在后；有明确年份的条目按从新到旧排列 |
+| 独立 Project 页面、Agent + Control 仓库链接 | [`_pages/projects.html`](_pages/projects.html) | 项目与 Research 同级，在这里维护项目链接和介绍 |
 | 添加或修改 News 内容 | [`_data/news.yml`](_data/news.yml) | 修改数据，首页和 News 汇总页会自动读取 |
 | News 汇总页的布局 | [`_pages/news.html`](_pages/news.html) | 添加消息时通常不需要修改这个文件 |
 | 新增博客正文 | [`_blogs/`](https://github.com/zjin73/zjin73.github.io/tree/master/_blogs) 下的文章 `.md` 文件 | 每篇文章一个文件，可复制 `template.md` 后新建 |
@@ -63,7 +64,7 @@ GitHub 的 Markdown Preview 可以检查文章格式，但不等于完整网站�
 
 旧模板的示例论文、博客、演讲、教学、主题组件和未使用资源已从当前分支清理。当前 Research 直接维护 `_pages/research.html`，博客正文统一放在 `_blogs/`。不需要重新建立旧 `_publications/`、`_portfolio/` 或 `_posts/` 目录。
 
-原 `/portfolio/` 和 `/publications/` 地址已跳转至 `/research/`。这个设置在 `_pages/research.html` 开头的 `redirect_from` 中，保留即可。
+原 `/publications/` 地址跳转至 `/research/`；原 `/portfolio/` 和 `/project/` 地址跳转至 `/projects/`。分别由对应页面开头的 `redirect_from` 设置。
 
 ## 3. 添加一条 News
 
@@ -138,7 +139,7 @@ published: true
 
 现有 Talk Tech 链接是科技类的外部博客入口，并没有自动把 Blogspot 中的所有文章搬到本仓库。随笔分类没有文章时，会正常显示空状态。
 
-## 5. 修改首页、Research、Service 和 Daily
+## 5. 修改首页、Research、Project、Service 和 Daily
 
 这些页面主要使用 HTML。文件名为 `.md` 的首页也包含 HTML。
 
@@ -153,11 +154,12 @@ published: true
 
 Research 中仍要区分论文状态：
 
-- 未正式发表的稿件放在 **Under Review**。
-- 已正式发表的论文放在 **Published**。
-- 论文接收或正式发表后，按实际情况更新状态和期刊信息，并把条目移动到合适位置。
-- 研究与工程项目放在 **Projects**，不要把项目经历写成论文发表记录。
-- **Open courses** 的当前链接是 https://github.com/zjin73/Agent-Control-and-Grid 。
+- 先按阶段组织：**Master's stage → Undergraduate stage**，最新阶段在前。
+- 阶段内有明确年份的条目从新到旧排列。同一年且没有更细日期时，保留现有顺序；不要猜测缺失日期。
+- 每个阶段分别列出 **Publications**，每篇论文旁标明 **Under Review** 或 **Published**，不再设置总的 Under Review 栏目。
+- 论文接收或正式发表后，按实际情况更新状态、日期和期刊信息。
+- 研究与工程项目放在独立 **Project** 页面 `_pages/projects.html`，不要把项目经历写成论文发表记录。
+- **Agent + Control** 链接为 https://github.com/zjin73/Agent-Control-and-Grid 。
 
 新增同类条目时，可以复制该区域里一个完整的 `<article>...</article>`，再替换内容。复制时保留完整标签，不要给多个条目使用相同的 `id`。
 
@@ -188,7 +190,7 @@ Daily 新增图片可以参考现有 `<figure>` 写法，照片放入 `assets/im
 - 正文主要使用 Arial / Helvetica，当前正文为 20px，辅助信息通常为 18px。
 - 保持浅色背景、很淡的网格、方正边框和少量蓝色强调。
 - 首页照片固定，News 在左侧，教育和实习在右侧。
-- 实习只列单位、时间和身份；工作项目细节放在 Research。
+- 首页实习只列单位、时间和身份；项目由独立 Project 页面维护。
 - News 位于导航倒数第二，CV 保持最后。
 - CV 页面保持单一 PDF 查看器，避免添加多余说明和按钮。
 

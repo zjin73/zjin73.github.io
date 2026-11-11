@@ -3,6 +3,8 @@ main:
     url: /
   - title: "Research"
     url: /research/
+  - title: "Project"
+    url: /projects/
   - title: "Service"
     url: /service/
   - title: "Blog"
