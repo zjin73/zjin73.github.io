@@ -1,64 +1,14 @@
 ---
-layout: archive
-title: "CV"
+layout: researcher
+title: Curriculum Vitae
 permalink: /cv/
-author_profile: true
+description: "Education, research experience, and technical background of Zhiheng Jin."
 redirect_from:
   - /resume
 ---
-
-{% include base_path %}
-
-Education
-======
-* Ph.D in Version Control Theory, GitHub University, 2018 (expected)
-* M.S. in Jekyll, GitHub University, 2014
-* B.S. in GitHub, GitHub University, 2012
-
-Work experience
-======
-* Spring 2024: Academic Pages Collaborator
-  * Github University
-  * Duties includes: Updates and improvements to template
-  * Supervisor: The Users
-
-* Fall 2015: Research Assistant
-  * Github University
-  * Duties included: Merging pull requests
-  * Supervisor: Professor Hub
-
-* Summer 2015: Research Assistant
-  * Github University
-  * Duties included: Tagging issues
-  * Supervisor: Professor Git
-  
-Skills
-======
-* Skill 1
-* Skill 2
-  * Sub-skill 2.1
-  * Sub-skill 2.2
-  * Sub-skill 2.3
-* Skill 3
-
-Publications
-======
-  <ul>{% for post in site.publications reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Talks
-======
-  <ul>{% for post in site.talks reversed %}
-    {% include archive-single-talk-cv.html  %}
-  {% endfor %}</ul>
-  
-Teaching
-======
-  <ul>{% for post in site.teaching reversed %}
-    {% include archive-single-cv.html %}
-  {% endfor %}</ul>
-  
-Service and leadership
-======
-* Currently signed in to 43 different slack teams
+<div id="top"></div>
+<header class="page-header"><div class="eyebrow">CURRICULUM VITAE / ZHIHENG JIN</div><h1 class="page-title">An engineering foundation.<br>A research trajectory.</h1><p class="page-lead">Control science, data-driven modelling, and intelligent robotic systems.</p><div class="actions"><button class="button print-button" data-print type="button">Print / Save as PDF <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13L13 3M3 3h10v10"/></svg></button><a class="button" href="mailto:zjin73@outlook.com?subject=CV%20enquiry">Request full CV <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13L13 3M3 3h10v10"/></svg></a></div></header>
+<section class="content-section"><h2>Education</h2><article class="detail"><div class="detail-label">EXPECTED APRIL 2027</div><div><h3>MSc in Control Science and Engineering</h3><p>Nanjing University of Aeronautics and Astronautics (NUAA), China</p><p>College of Astronautics · Department of Aerospace Control Engineering</p></div></article><article class="detail"><div class="detail-label">UNDERGRADUATE</div><div><h3>BEng in Aircraft Design and Engineering</h3><p>Shenyang Aerospace University, China</p><p>Undergraduate studies began in Mechanical Engineering before a transfer to Aircraft Design and Engineering.</p></div></article></section>
+<section class="content-section"><h2>Research experience</h2><article class="detail"><div class="detail-label">MODELLING & CONTROL</div><div><h3>Data-driven predictive control</h3><p>Koopman-based system modelling, disturbance prediction, and model predictive control for nonlinear dynamics.</p></div></article><article class="detail"><div class="detail-label">ROBOT MOTION</div><div><h3>Learning-based manipulator planning</h3><p>Diffusion-based motion generation, multi-arm planning, and the connection between trajectory generation and tracking control.</p></div></article><article class="detail"><div class="detail-label">MULTI-AGENT LEARNING</div><div><h3>Cooperative space robotics</h3><p>Multi-agent reinforcement learning for a simulated four-arm robotic system, including MAPPO/MADDPG and low-level tracking.</p></div></article></section>
+<section class="content-section"><h2>Technical background</h2><div class="detail"><div class="detail-label">METHODS</div><div><p>Model predictive control · System identification · Koopman methods · Robot motion planning · Reinforcement learning · Multi-agent coordination</p></div></div><div class="detail"><div class="detail-label">TOOLS & ENVIRONMENTS</div><div><p>Python · MuJoCo · Git · LaTeX · Linux / Ubuntu · macOS</p></div></div><div class="detail"><div class="detail-label">RESEARCH INTERESTS</div><div><p>Decision-making under uncertainty · POMDPs · Learning-assisted optimization · Reliable autonomy · Industrial automation</p></div></div></section>
+<section class="content-section"><h2>Contact</h2><p><a href="mailto:zjin73@outlook.com">zjin73@outlook.com</a><br><a href="https://github.com/zjin73">github.com/zjin73</a><br>Nanjing, China</p></section>

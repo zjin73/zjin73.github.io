@@ -1,14 +1,11 @@
 ---
-layout: archive
-title: "Portfolio"
+layout: researcher
+title: Research
 permalink: /portfolio/
-author_profile: true
+description: "Research experience and future directions in predictive control, multi-arm robotics, and decision-making under uncertainty."
 ---
-
-{% include base_path %}
-
-
-{% for post in site.portfolio %}
-  {% include archive-single.html %}
-{% endfor %}
-
+<div id="top"></div>
+<header class="page-header"><div class="eyebrow">RESEARCH / SELECTED EXPERIENCE</div><h1 class="page-title">Models. Motion. Decisions.</h1><p class="page-lead">My work starts with the dynamics of physical systems and extends toward the planning and coordination of autonomous agents.</p></header>
+<section class="content-section"><h2>Research experience</h2><article class="detail"><div class="detail-label">01 / PREDICTIVE CONTROL</div><div><h3>Learning models for nonlinear control</h3><p>My research experience includes Koopman-based representations of nonlinear dynamics and disturbance prediction for model predictive control. I am interested in how data-driven models can support useful predictions while retaining a structure suitable for optimization.</p><div class="tags"><span>KOOPMAN METHODS</span><span>BILINEAR MODELS</span><span>MPC</span></div></div></article><article class="detail"><div class="detail-label">02 / MOTION PLANNING</div><div><h3>Generative planning for robotic arms</h3><p>I work on learning-based motion planning for manipulators, including diffusion-based trajectory generation and multi-arm settings. The central challenge is to connect flexible learned motion priors with collision avoidance, trajectory smoothness, and executable robot motion.</p><div class="tags"><span>DIFFUSION MODELS</span><span>TRAJECTORY GENERATION</span><span>MULTI-ARM SYSTEMS</span></div></div></article><article class="detail"><div class="detail-label">03 / COOPERATIVE ROBOTICS</div><div><h3>Coordinating a multi-arm space robot</h3><p>I have studied cooperative manipulation using multi-agent reinforcement learning in a simulated space robot with four UR5 arms. This work connects decentralized policy decisions with low-level joint tracking and evaluates how coordination behaves in the presence of disturbances.</p><div class="tags"><span>MAPPO</span><span>MADDPG</span><span>DEC-POMDP</span><span>TRACKING CONTROL</span></div></div></article></section>
+<section class="content-section"><h2>Questions I want to explore</h2><article class="detail"><div class="detail-label">IDENTIFICATION & ACTION</div><div><h3>When should an agent act to learn?</h3><p>How can an autonomous system select actions that improve its model while making progress on a task? I am interested in information gathering, model uncertainty, and planning in belief space.</p></div></article><article class="detail"><div class="detail-label">LEARNING & FEASIBILITY</div><div><h3>How can learned plans respect physical constraints?</h3><p>I would like to explore the combination of generative motion models with optimization-based control, using learned proposals to guide planning while explicitly checking feasibility.</p></div></article><article class="detail"><div class="detail-label">AGENTS & SHARED RESOURCES</div><div><h3>How can local decisions lead to reliable coordination?</h3><p>I am interested in systems where agents have different observations but share constraints, including robotic teams and distributed energy or industrial systems.</p></div></article><p class="notice">These questions describe future research interests; they are distinct from the research experience summarized above.</p></section>
+<section class="contact"><div><div class="eyebrow">DISCUSS THE DETAILS</div><h2>Interested in the work?</h2><p>Please get in touch to discuss my research background, current projects, or potential PhD directions.</p></div><a href="mailto:zjin73@outlook.com">Let's talk <svg class="link-arrow" viewBox="0 0 16 16" aria-hidden="true"><path d="M3 13L13 3M3 3h10v10"/></svg></a></section>
