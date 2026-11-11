@@ -1,16 +1,22 @@
 ---
 layout: researcher
-title: Blogs
+title: Blog
 permalink: /blogs/
-description: "Research notes and technical writing by Zhiheng Jin on control, identification, optimization, and robotics."
+description: "Personal essays and notes on technology, control, and research by Zhiheng Jin."
 ---
-<header class="page-header"><h1 class="page-title">Blogs</h1></header>
-<section class="content-section"><p>My existing notes on technology and control theory are on <a href="https://zjin73tech.blogspot.com/">Talk Tech </a>.</p><h2>Latest posts</h2>
+<header class="page-header"><h1 class="page-title">Blog</h1></header>
+<div class="blog-filters" role="group" aria-label="Filter by category" hidden>
+<button type="button" data-blog-filter="all" aria-pressed="true" aria-controls="blog-list">All</button>
+<button type="button" data-blog-filter="personal" aria-pressed="false" aria-controls="blog-list">Personal essays</button>
+<button type="button" data-blog-filter="technology" aria-pressed="false" aria-controls="blog-list">Technology</button>
+</div>
+<section id="blog-list" class="blog-list" aria-label="Blog entries">
 {% assign blog_posts = site.blogs | sort: 'date' | reverse %}
 {% for post in blog_posts %}
-<article class="paper"><div class="card-type">{{ post.date | date: '%B %d, %Y' }}</div><h3><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3><p>{{ post.description | escape }}</p><a href="{{ post.url | relative_url }}">Read article </a></article>
-{% else %}
-<p class="empty-state">No posts here yet.</p>
+{% assign post_category = post.category | default: 'technology' %}
+<article class="paper blog-entry" data-category="{{ post_category | escape }}"><div class="blog-meta"><span class="blog-tag">{% if post_category == 'personal' %}Personal essays{% else %}Technology{% endif %}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %d, %Y' }}</time></div><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>{% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}</article>
 {% endfor %}
+<article class="paper blog-entry" data-category="technology"><div class="blog-meta"><span class="blog-tag">Technology</span><span>External archive</span></div><h2><a href="https://zjin73tech.blogspot.com/">Talk Tech</a></h2><p>My existing notes on technology and control theory.</p></article>
 </section>
-
+<p class="empty-state" id="blog-empty" hidden>No posts in this category yet.</p>
+<p class="sr-only" id="blog-filter-status" role="status" aria-live="polite" aria-atomic="true"></p>

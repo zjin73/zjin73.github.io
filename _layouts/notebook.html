@@ -1,6 +1,6 @@
 ---
 layout: researcher
 ---
-<header class="page-header"><div class="eyebrow">Research notebook · {{ page.date | date: '%B %d, %Y' }}</div><h1 class="page-title">{{ page.title | escape }}</h1>{% if page.description %}<p class="page-lead">{{ page.description | escape }}</p>{% endif %}</header>
+<header class="page-header"><div class="eyebrow">{% if page.category == 'personal' %}Personal essays{% else %}Technology{% endif %} · {{ page.date | date: '%B %d, %Y' }}</div><h1 class="page-title">{{ page.title | escape }}</h1>{% if page.description %}<p class="page-lead">{{ page.description | escape }}</p>{% endif %}</header>
 <article class="blog-content">{{ content }}</article>
-<p class="blog-back"><a href="{{ '/blogs/' | relative_url }}">← Back to Blogs</a></p>
+<p class="blog-back"><a href="{{ '/blogs/' | relative_url }}">← Back to Blog</a></p>

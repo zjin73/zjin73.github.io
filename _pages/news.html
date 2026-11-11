@@ -1,0 +1,13 @@
+---
+layout: researcher
+title: News
+permalink: /news/
+description: "Updates from Zhiheng Jin and SIC Lab, in chronological order."
+---
+<header class="page-header"><h1 class="page-title">News</h1></header>
+{% assign news_items = site.data.news | sort: 'date' | reverse %}
+<ol class="news-timeline" aria-label="News, newest first">
+{% for item in news_items %}
+<li><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%Y.%m.%d' }}</time><p lang="{{ item.lang | default: 'en' }}">{{ item.text | escape }}</p></li>
+{% endfor %}
+</ol>

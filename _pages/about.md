@@ -17,7 +17,12 @@ redirect_from:
 </section>
 <section class="interests" aria-labelledby="interests-title"><h2 id="interests-title">Research interests</h2><ul><li>System Identification</li><li>Multi-Agent Systems</li><li>Agent + Control</li><li>Complex Systems</li></ul></section>
 <div class="home-overview">
-<section class="home-section news-column" aria-labelledby="news-title"><h2 id="news-title">News</h2><article class="news-item"><time datetime="2026-11-11">2026.11.11</time><p lang="zh">个人网站搭建成功啦！</p></article></section>
+<section class="home-section news-column" aria-labelledby="news-title"><div class="section-title"><h2 id="news-title">News</h2><a href="{{ '/news/' | relative_url }}">All news</a></div>
+{% assign news_items = site.data.news | sort: 'date' | reverse %}
+{% for item in news_items limit:3 %}
+<article class="news-item"><time datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: '%Y.%m.%d' }}</time><p lang="{{ item.lang | default: 'en' }}">{{ item.text | escape }}</p></article>
+{% endfor %}
+</section>
 <div class="background-column">
 <section class="home-section" aria-labelledby="education-title"><h2 id="education-title">Education</h2>
 <article class="record"><p class="record-meta">2024.09–Present</p><h3>Nanjing University of Aeronautics and Astronautics</h3><p>Master of Research in Control Science and Engineering</p><p class="record-meta">GPA: 85/100 · Supervisor: Dan Yu</p></article>
@@ -25,8 +30,8 @@ redirect_from:
 <article class="record"><p class="record-meta">2019.09–2021.02</p><h3>Shenyang Aerospace University</h3><p>Mechanical Engineering.</p></article>
 </section>
 <section class="home-section" aria-labelledby="internships-title"><h2 id="internships-title">Internships</h2>
-<article class="record"><p class="record-meta">2025–Present</p><h3>Jiangsu Industrial Technology Research Institute</h3><p>Intern</p></article>
-<article class="record"><p class="record-meta">2021</p><h3>Liaoning General Aviation Research Institute</h3><p>Intern</p></article>
+<article class="record"><p class="record-meta">2025–Present</p><h3>Jiangsu Industrial Technology Research Institute</h3><p>Control Engineer</p></article>
+<article class="record"><p class="record-meta">2021</p><h3>Liaoning General Aviation Research Institute</h3><p>Research Assistant</p></article>
 </section>
 </div>
 </div>
