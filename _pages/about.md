@@ -10,7 +10,7 @@ redirect_from:
 <section class="profile" aria-labelledby="profile-name">
 <div class="profile-copy"><h1 id="profile-name">Zhiheng Jin <span lang="zh">靳志衡</span></h1>
 <p class="profile-role">Master's student · Control Science and Engineering<br>Nanjing University of Aeronautics and Astronautics</p>
-<p>I study system identification, multi-agent systems, and the connection between intelligent agents and control. My research includes manipulator motion planning and Koopman model predictive control, supervised by Dan Yu.</p>
+<p>I study system identification, multi-agent systems, and the connection between intelligent agents and control. My research includes manipulator motion planning and model predictive control, supervised by Dan Yu.</p>
 <div class="profile-contact"><a href="mailto:zjin73@nuaa.edu.cn">zjin73@nuaa.edu.cn</a><span>Nanjing, China</span></div>
 <div class="social-links" aria-label="Social profiles"><a href="https://www.youtube.com/@zjin73">YouTube</a><a href="https://x.com/zjin73">X</a><a href="https://www.linkedin.com/in/zjin73">LinkedIn</a><a href="https://github.com/zjin73">GitHub</a></div></div>
 <img class="profile-photo" src="{{ '/assets/images/zhiheng-portrait.jpg' | relative_url }}" alt="Zhiheng Jin — photograph from his Google Sites homepage" width="1080" height="891">
