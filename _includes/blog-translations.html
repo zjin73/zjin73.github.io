@@ -1,22 +1,36 @@
+{% assign translation_document = include.post | default: page %}
+{% capture translation_language %}{% include blog-language.html lang=translation_document.lang %}{% endcapture %}
+{% assign translation_language = translation_language | strip %}
+{% assign translation_key = translation_document.translation_key | default: '' | strip %}
 {% assign chinese_version = nil %}
 {% assign english_version = nil %}
-{% if page.translation_key and page.translation_key != '' %}
+{% if translation_key != '' %}
   {% for candidate in site.blogs %}
-    {% if candidate.published != false and candidate.translation_key == page.translation_key %}
+    {% assign candidate_key = candidate.translation_key | default: '' | strip %}
+    {% if candidate.published != false and candidate_key == translation_key %}
       {% capture candidate_language %}{% include blog-language.html lang=candidate.lang %}{% endcapture %}
+      {% assign candidate_language = candidate_language | strip %}
       {% if candidate_language == 'zh-CN' %}{% assign chinese_version = candidate %}{% endif %}
       {% if candidate_language == 'en' %}{% assign english_version = candidate %}{% endif %}
     {% endif %}
   {% endfor %}
 {% endif %}
-{% if notebook_language == 'zh-CN' or notebook_language == 'en' %}
+{% if include.compact %}
+  {% if translation_language == 'zh-CN' and english_version %}
+  <p class="blog-translation-link"><a href="{{ english_version.url | relative_url }}" hreflang="en" rel="alternate">切换到英文 / Read in English</a></p>
+  {% elsif translation_language == 'en' and chinese_version %}
+  <p class="blog-translation-link"><a href="{{ chinese_version.url | relative_url }}" hreflang="zh-CN" rel="alternate">阅读中文版 / Read in Chinese</a></p>
+  {% endif %}
+{% elsif translation_language == 'zh-CN' or translation_language == 'en' %}
 <div class="translation-switch" role="group" aria-label="Article language / 文章语言">
-  <span class="translation-label">Language / 语言</span>
-  {% if notebook_language == 'zh-CN' %}<span class="translation-option" lang="zh-CN" aria-current="page">中文</span>
-  {% elsif chinese_version %}<a class="translation-option" href="{{ chinese_version.url | relative_url }}" hreflang="zh-CN" lang="zh-CN" rel="alternate">中文</a>
-  {% else %}<span class="translation-option unavailable" lang="zh-CN" aria-disabled="true" title="暂无中文版本 / Chinese version not available">中文<span class="sr-only">（暂无此版本）</span></span>{% endif %}
-  {% if notebook_language == 'en' %}<span class="translation-option" lang="en" aria-current="page">English</span>
-  {% elsif english_version %}<a class="translation-option" href="{{ english_version.url | relative_url }}" hreflang="en" lang="en" rel="alternate">English</a>
-  {% else %}<span class="translation-option unavailable" lang="en" aria-disabled="true" title="暂无英文版本 / English version not available">English<span class="sr-only"> (not available)</span></span>{% endif %}
+  {% if translation_language == 'zh-CN' %}
+    <span class="translation-current" lang="zh-CN">当前：中文</span>
+    {% if english_version %}<a class="translation-option translation-action" href="{{ english_version.url | relative_url }}" hreflang="en" rel="alternate">切换到英文 / Read in English</a>
+    {% else %}<span class="translation-option unavailable" aria-disabled="true">English · 暂无英文版</span>{% endif %}
+  {% else %}
+    <span class="translation-current" lang="en">Current: English</span>
+    {% if chinese_version %}<a class="translation-option translation-action" href="{{ chinese_version.url | relative_url }}" hreflang="zh-CN" rel="alternate">阅读中文版 / Read in Chinese</a>
+    {% else %}<span class="translation-option unavailable" aria-disabled="true">中文 · Not available</span>{% endif %}
+  {% endif %}
 </div>
 {% endif %}

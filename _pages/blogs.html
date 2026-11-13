@@ -29,6 +29,7 @@ description: "Personal essays and notes on technology, control, and research by 
 {% for post in blog_posts %}
 {% assign post_category = post.category | default: 'technology' %}
 {% capture post_language %}{% include blog-language.html lang=post.lang %}{% endcapture %}
+{% assign post_language = post_language | strip %}
 <article class="paper blog-entry" data-category="{{ post_category | escape }}" data-language="{{ post_language }}">
   <div class="blog-meta">
     <span class="blog-tag">{% if post_category == 'personal' %}Personal essays / 随笔{% else %}Technology / 科技{% endif %}</span>
@@ -37,6 +38,7 @@ description: "Personal essays and notes on technology, control, and research by 
   </div>
   <h2 lang="{{ post_language }}"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
   {% if post.description %}<p lang="{{ post_language }}">{{ post.description | escape }}</p>{% endif %}
+  {% include blog-translations.html post=post compact=true %}
 </article>
 {% endfor %}
 </section>

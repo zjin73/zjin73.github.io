@@ -9,7 +9,7 @@
 3. 修改标题、日期、摘要和正文，再填写以下字段。
 4. 写完把 `published: false` 改为 `published: true`。
 5. 在 GitHub 本目录点 **Add file → Upload files**，上传新的 `.md`，提交到 `master`。
-6. 等 Pages 部署成功，在 Blog 检查“分类 + 语言”筛选和文章中的译文切换。
+6. 等 Pages 部署成功，在 Blog 检查“分类 + 语言”筛选；每篇摘要下可直接打开译文。文章标题下和正文末尾也有明确的蓝色切换按钮：中文版为“切换到英文 / Read in English”，英文版为“阅读中文版 / Read in Chinese”。
 
 | 字段 | 填法 |
 | --- | --- |

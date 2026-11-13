@@ -68,3 +68,13 @@ nav a[aria-current]{background:#e7eef8;border-bottom-color:var(--accent)}
 .translation-switch a:hover{background:#e7eef8}
 @media(max-width:700px){.blog-filter-row{grid-template-columns:1fr;gap:7px}.blog-filter-label{padding-top:0}.blog-filters{gap:14px;padding:17px 0}.blog-filters button{padding:8px 12px}.translation-label{flex-basis:100%;margin:0}.blog-meta{gap:7px 14px}}
 @media print{.blog-filters,.blog-filter-status{display:none}}
+
+/* Keep the other language easy to find above and below every translated article. */
+.translation-current{font-size:18px;color:var(--muted);padding:6px 0;margin-right:8px}
+.translation-option.translation-action{background:var(--accent);border-color:var(--accent);color:#fff;font-weight:600;text-align:center}
+.translation-switch a.translation-action:hover{background:#043c88;color:#fff;text-decoration:underline}
+.blog-footer{max-width:960px;border-top:1px solid var(--line);margin-top:26px;padding-top:18px}
+.blog-footer .translation-switch{margin-top:0}
+.blog-translation-link{font-size:18px;margin-top:12px!important}
+.blog-translation-link a{text-decoration:underline}
+@media(max-width:700px){.translation-current{flex-basis:100%;padding:0;margin:0}.translation-option.translation-action{max-width:100%;padding:9px 14px;line-height:1.5}}

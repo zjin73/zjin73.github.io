@@ -1,6 +1,6 @@
 # instruction — 个人网站维护说明
 
-本说明对应 **zjin73/zjin73.github.io** 当前实际代码与线上页面，核对日期：2026-11-13（北京时间）。唯一完整维护手册保留原文件名 `instruction.md`，位于仓库根目录。
+本说明对应 **zjin73/zjin73.github.io** 当前实际代码与线上页面，核对日期：2026-11-14（北京时间）。唯一完整维护手册保留原文件名 `instruction.md`，位于仓库根目录。
 
 - 网站：[zjin73.github.io](https://zjin73.github.io/)
 - 仓库：[zjin73/zjin73.github.io](https://github.com/zjin73/zjin73.github.io)
@@ -29,7 +29,7 @@
 | [Research](https://zjin73.github.io/research/) | [`_pages/research.html`](_pages/research.html) | 硕士阶段在前，本科在后；每个阶段放论文、专利等。硕士研究介绍为多机器人运动规划、生成式控制和 MPC。记录左侧状态/时间，右侧标题和作者；论文逐条标注 Under Review / Published，没有整体 Under Review 方框。 |
 | [Project](https://zjin73.github.io/projects/) | [`_pages/projects.html`](_pages/projects.html) | 两个简洁的纵向项目区块：先 Agent + Control，再 Control Theory Slides；标题直接链接对应 GitHub 仓库。 |
 | [Service](https://zjin73.github.io/service/) | [`_pages/service.html`](_pages/service.html) | Teaching（自动控制原理助教）和 Peer learning（线性代数、理论力学辅导）。已无 Community & extracurricular activities。 |
-| [Blog](https://zjin73.github.io/blogs/) | [`_pages/blogs.html`](_pages/blogs.html) + [`_blogs/`](_blogs/) | 顶部分类与语言两行筛选，可组合选择；文章按日期从新到旧，标明语言；文章页可切换已上传的中英文译文。只显示自己上传到 `_blogs/` 的文章。 |
+| [Blog](https://zjin73.github.io/blogs/) | [`_pages/blogs.html`](_pages/blogs.html) + [`_blogs/`](_blogs/) | 顶部分类与语言两行筛选，可组合选择；文章按日期从新到旧，标明语言并提供译文链接；文章页顶部和底部均可切换中英文。只显示自己上传到 `_blogs/` 的文章。 |
 | [Gallery](https://zjin73.github.io/gallery/) | [`_pages/gallery.html`](_pages/gallery.html) + [`assets/images/`](assets/images/) | Cooking 两张、Theatre 两张、Discussions & presentations 一张；照片下方配文字。没有活动履历列表，也不是轮播图。 |
 | [News](https://zjin73.github.io/news/) | [`_pages/news.html`](_pages/news.html) + [`_data/news.yml`](_data/news.yml) | 日期左、正文右的时间线，最新在前；目前只有“个人网站搭建成功啦！”。导航倒数第二。 |
 | [CV](https://zjin73.github.io/cv/) | [`_pages/cv.md`](_pages/cv.md) + [`files/CV_Zhiheng-JIN.pdf`](files/CV_Zhiheng-JIN.pdf) | 居中、有最大宽度限制的真实 PDF 阅读区域，当前 3 页，手机号已涂黑；页面没有额外引导区块。导航最后一个。 |
@@ -51,7 +51,7 @@
 | [`assets/images/`](assets/images/) | 首页头像、Gallery 照片；新博客配图也可放这里 | 上传照片时需要 |
 | [`files/`](files/) | 当前真实 CV PDF；今后公开附件可放这里并加链接 | 换 CV/附件时需要 |
 | [`_layouts/researcher.html`](_layouts/researcher.html) | 通用 HTML 外壳、导航、页脚、CSS 和脚本引用 | 全站结构调整时才需要 |
-| [`_layouts/notebook.html`](_layouts/notebook.html) | 单篇博客的标题、日期、分类、语言切换、摘要、正文与返回链接 | 博客版式调整时才需要 |
+| [`_layouts/notebook.html`](_layouts/notebook.html) | 单篇博客的标题、日期、分类、顶部与底部语言切换、摘要、正文与返回链接 | 博客版式调整时才需要 |
 | [`assets/css/researcher.css`](assets/css/researcher.css) | 字体、颜色、间距、相册比例、手机适配等样式 | 修改视觉风格时需要 |
 | [`assets/js/blog-filters.js`](assets/js/blog-filters.js) | 博客分类与语言组合筛选、网址状态 | 修改筛选逻辑时才需要 |
 | [`_includes/blog-language.html`](_includes/blog-language.html)、[`_includes/blog-translations.html`](_includes/blog-translations.html) | 识别语言代码、关联中英文译文 | 修改双语功能时才需要 |
@@ -290,13 +290,13 @@ published: true
 
 `translation_key` 是配对编号，不是文件名。同一篇文章的两种语言必须完全一致；不同文章必须使用不同编号，例如 `mpc-note`、`payload-identification`。只用小写英文字母、数字、短横线最方便。同一个编号每种语言只能有一个已发表文件，不要把模板里的 `change-this-key` 原样用于多篇文章。
 
-部署后，文章标题下显示 **中文 / English** 切换按钮；当前语言高亮，另一种语言链接到对应已发表译文。中文页面的日期分类和返回链接也采用中文。此功能负责筛选和切换已有译文，**不会自动翻译正文，也不会自动翻译全站导航或其他页面**。
+部署后，文章标题下和正文末尾都有语言切换入口：中文版显示 **当前：中文** 和蓝色按钮 **切换到英文 / Read in English**；英文版显示 **Current: English** 和蓝色按钮 **阅读中文版 / Read in Chinese**。博客列表中每篇已配对文章的摘要下也有对应译文链接，可以直接跳转。中文页面的日期分类和返回链接也采用中文。此功能负责筛选和切换已有译文，**不会自动翻译正文，也不会自动翻译全站导航或其他页面**。
 
 ### 只有中文版／英文版时怎么办
 
 只上传一种语言也可以正常发布和筛选；填好 `lang` 即可，`translation_key` 可先留空，或提前填写以后准备共用的编号。
 
-另一语言没有已发表的配对文章时，按钮置灰、不可点击，不会跳到错误页面。以后上传译文，用相同编号和另一 `lang`，并设置 `published: true`，切换链接就会自动出现。下架其中一版时，另一版的切换按钮会自动恢复为不可用。不要为了显示按钮上传空译文。
+另一语言没有已发表的配对文章时，文章页显示不可点击的“暂无英文版”或“Not available”，列表中不生成对应译文链接，不会跳到错误页面。以后上传译文，用相同编号和另一 `lang`，并设置 `published: true`，切换链接就会自动出现。下架其中一版时，另一版的切换按钮会自动恢复为不可用。不要为了显示按钮上传空译文。
 
 兼容旧写法：`chinese` / `zh` / `zh-Hans` 识别为中文，`english` / `en-US` / `en-GB` 识别为英文；新文章统一写 `zh-CN` 或 `en`。缺少语言或填了无法识别的值时，文章标为“未设置语言”，只会出现在语言 All / 全部中。语言字段只声明正文语言，不能把中文正文标成英文来代替翻译。
 
@@ -309,7 +309,7 @@ published: true
 | 分类／语言按钮文字、文章列表标签 | `_pages/blogs.html` |
 | 两个筛选条件如何组合、网址中的筛选状态 | `assets/js/blog-filters.js` |
 | 语言代码兼容规则 | `_includes/blog-language.html` |
-| 译文如何配对、文章语言按钮 | `_includes/blog-translations.html` |
+| 译文如何配对、列表译文链接与文章语言按钮 | `_includes/blog-translations.html` |
 | 文章标题、摘要、语言按钮的位置和返回链接 | `_layouts/notebook.html` |
 | 页面 `<html lang>`、脚本和样式的版本号 | `_layouts/researcher.html` |
 | 筛选按钮／切换按钮的样式、手机布局 | `assets/css/researcher.css` |
@@ -408,8 +408,9 @@ published: true
 | 新博客没出现 | 文件是否在 `_blogs/`；后缀是否真的 `.md`；两条 `---` 是否齐全；`published: true`；是否仍叫被排除的 `template.md` / `template-en.md`；Actions 是否成功 |
 | 分类筛选找不到文章 | `category` 是否严格为 `personal` / `technology`，以及当前语言筛选是否也匹配 |
 | 语言筛选找不到文章 | `lang` 是否为 `zh-CN` / `en`；先选语言 All 查看是否标为“未设置语言” |
-| 中英文切换按钮置灰 | 另一版本是否已上传到 `_blogs/`、`published: true`、`translation_key` 完全相同且语言不同 |
+| 中英文切换按钮显示暂无版本 | 另一版本是否已上传到 `_blogs/`、`published: true`、`translation_key` 完全相同且语言不同 |
 | 中英文切换到了错误文章 | 不同文章是否误用了同一个 `translation_key`；每个配对编号每种语言只保留一篇 |
+| 中文页面看不到新入口 | 先从 Blog 列表重新进入文章，再强制刷新（Mac：Cmd+Shift+R；Windows/Linux：Ctrl+Shift+R）；入口位于标题下和正文末尾 |
 | 切换语言后文字没有翻译 | 检查对应文件是否真正写了译文；此功能不自动翻译正文 |
 | 配图不显示 | 文件是否上传成功；`src`/Markdown 路径、大小写、扩展名是否完全一致；是否还在使用本地磁盘路径 |
 | Gallery 上传照片后无变化 | 是否同时在 `gallery.html` 添加了 `<figure>` |

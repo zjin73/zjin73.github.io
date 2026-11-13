@@ -31,7 +31,7 @@
 
 ![Service](screenshots/service.png)
 
-2026-11-13 更新：Blog 只显示自行上传的文章；列表顶部为 Category / 分类与 Language / 语言两行筛选，可组合使用。文章页在标题下显示中文 / English 切换，自动关联相同 `translation_key` 的已发表译文。手机上筛选行纵向排列、按钮自动换行。具体维护方法见 [instruction.md 第 7 节](../instruction.md#7-blog本地写-markdown-并发布)。
+2026-11-14 更新：Blog 只显示自行上传的文章；列表顶部为 Category / 分类与 Language / 语言两行筛选，可组合使用。文章标题下和正文末尾均显示蓝色译文切换按钮：中文版“切换到英文 / Read in English”，英文版“阅读中文版 / Read in Chinese”；列表中也有对应译文链接。入口自动关联相同 `translation_key` 的已发表译文。手机上筛选行纵向排列、按钮自动换行。具体维护方法见 [instruction.md 第 7 节](../instruction.md#7-blog本地写-markdown-并发布)。
 
 下图是此前版本的留档，不代表当前 Blog，不包含这次新增的语言筛选与切换。
 

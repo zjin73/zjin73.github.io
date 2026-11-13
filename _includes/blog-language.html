@@ -1,4 +1,4 @@
-{%- assign language_code = include.lang | default: '' | downcase | replace: '_', '-' -%}
+{%- assign language_code = include.lang | default: '' | strip | downcase | replace: '_', '-' -%}
 {%- case language_code -%}
   {%- when 'zh-cn', 'zh', 'zh-hans', 'chinese' -%}zh-CN
   {%- when 'en', 'en-us', 'en-gb', 'english' -%}en
