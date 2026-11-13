@@ -1,5 +1,6 @@
 <!doctype html>
-<html lang="en">
+{% capture document_language %}{% if page.lang %}{% include blog-language.html lang=page.lang %}{% else %}en{% endif %}{% endcapture %}
+<html lang="{{ document_language }}">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,7 @@
 <meta property="og:description" content="{{ page.description | default: site.description | escape }}">
 <meta property="og:type" content="website">
 <link rel="icon" href="data:,">
-<link rel="stylesheet" href="{{ '/assets/css/researcher.css' | relative_url }}?v=20261112-centered-nav-v9">
+<link rel="stylesheet" href="{{ '/assets/css/researcher.css' | relative_url }}?v=20261113-blog-languages">
 </head>
 <body {% if page.url == '/cv/' %}class="cv-page"{% endif %}>
 <a class="skip" href="#main">Skip to content</a>
@@ -30,6 +31,6 @@
 </nav></div></header>
 <main id="main" class="wrap">{{ content }}</main>
 <footer class="wrap footer"><span>© {{ 'now' | date: '%Y' }} Zhiheng Jin</span></footer>
-{% if page.url == '/blogs/' %}<script src="{{ '/assets/js/blog-filters.js' | relative_url }}?v=20261111-v1" defer></script>{% endif %}
+{% if page.url == '/blogs/' %}<script src="{{ '/assets/js/blog-filters.js' | relative_url }}?v=20261113-blog-languages" defer></script>{% endif %}
 </body>
 </html>

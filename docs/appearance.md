@@ -10,7 +10,7 @@
 | Research | 硕士在前、本科在后；各阶段论文和专利 | [研究页](screenshots/research.png) |
 | Project | Agent + Control；Control Theory Slides | [项目页](screenshots/project.png) |
 | Service | Teaching 与 Peer learning | [服务页](screenshots/service.png) |
-| Blog | 两类文章筛选、自行上传的文章列表 | [博客页](screenshots/blog.png) |
+| Blog | 分类与中文／English 双维筛选；文章页提供译文切换 | [旧版留档，非当前版本](screenshots/blog.png) |
 | Gallery | Cooking、Theatre、Discussions & presentations，五张照片 | [完整相册](screenshots/gallery.png) |
 | News | 新到旧的时间线 | [动态页](screenshots/news.png) |
 | CV | 居中真实 PDF 阅读器，手机号已涂黑 | [CV 首屏](screenshots/cv.png) |
@@ -31,7 +31,9 @@
 
 ![Service](screenshots/service.png)
 
-博客当前已移除 Talk Tech 外部入口，仅显示自行上传的文章；下图为移除前留档。
+2026-11-13 更新：Blog 只显示自行上传的文章；列表顶部为 Category / 分类与 Language / 语言两行筛选，可组合使用。文章页在标题下显示中文 / English 切换，自动关联相同 `translation_key` 的已发表译文。手机上筛选行纵向排列、按钮自动换行。具体维护方法见 [instruction.md 第 7 节](../instruction.md#7-blog本地写-markdown-并发布)。
+
+下图是此前版本的留档，不代表当前 Blog，不包含这次新增的语言筛选与切换。
 
 ![Blog（移除外部入口前留档）](screenshots/blog.png)
 

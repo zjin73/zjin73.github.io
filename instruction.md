@@ -1,6 +1,6 @@
 # instruction — 个人网站维护说明
 
-本说明对应 **zjin73/zjin73.github.io** 当前实际代码与线上页面，核对日期：2026-11-12（北京时间）。唯一完整维护手册保留原文件名 `instruction.md`，位于仓库根目录。
+本说明对应 **zjin73/zjin73.github.io** 当前实际代码与线上页面，核对日期：2026-11-13（北京时间）。唯一完整维护手册保留原文件名 `instruction.md`，位于仓库根目录。
 
 - 网站：[zjin73.github.io](https://zjin73.github.io/)
 - 仓库：[zjin73/zjin73.github.io](https://github.com/zjin73/zjin73.github.io)
@@ -29,7 +29,7 @@
 | [Research](https://zjin73.github.io/research/) | [`_pages/research.html`](_pages/research.html) | 硕士阶段在前，本科在后；每个阶段放论文、专利等。硕士研究介绍为多机器人运动规划、生成式控制和 MPC。记录左侧状态/时间，右侧标题和作者；论文逐条标注 Under Review / Published，没有整体 Under Review 方框。 |
 | [Project](https://zjin73.github.io/projects/) | [`_pages/projects.html`](_pages/projects.html) | 两个简洁的纵向项目区块：先 Agent + Control，再 Control Theory Slides；标题直接链接对应 GitHub 仓库。 |
 | [Service](https://zjin73.github.io/service/) | [`_pages/service.html`](_pages/service.html) | Teaching（自动控制原理助教）和 Peer learning（线性代数、理论力学辅导）。已无 Community & extracurricular activities。 |
-| [Blog](https://zjin73.github.io/blogs/) | [`_pages/blogs.html`](_pages/blogs.html) + [`_blogs/`](_blogs/) | 顶部 All / Personal essays / Technology 分类筛选；文章按日期从新到旧；只显示自己上传到 `_blogs/` 的文章，不再显示外部博客入口。 |
+| [Blog](https://zjin73.github.io/blogs/) | [`_pages/blogs.html`](_pages/blogs.html) + [`_blogs/`](_blogs/) | 顶部分类与语言两行筛选，可组合选择；文章按日期从新到旧，标明语言；文章页可切换已上传的中英文译文。只显示自己上传到 `_blogs/` 的文章。 |
 | [Gallery](https://zjin73.github.io/gallery/) | [`_pages/gallery.html`](_pages/gallery.html) + [`assets/images/`](assets/images/) | Cooking 两张、Theatre 两张、Discussions & presentations 一张；照片下方配文字。没有活动履历列表，也不是轮播图。 |
 | [News](https://zjin73.github.io/news/) | [`_pages/news.html`](_pages/news.html) + [`_data/news.yml`](_data/news.yml) | 日期左、正文右的时间线，最新在前；目前只有“个人网站搭建成功啦！”。导航倒数第二。 |
 | [CV](https://zjin73.github.io/cv/) | [`_pages/cv.md`](_pages/cv.md) + [`files/CV_Zhiheng-JIN.pdf`](files/CV_Zhiheng-JIN.pdf) | 居中、有最大宽度限制的真实 PDF 阅读区域，当前 3 页，手机号已涂黑；页面没有额外引导区块。导航最后一个。 |
@@ -45,15 +45,16 @@
 | 路径 | 用途 | 日常是否需要修改 |
 | --- | --- | --- |
 | [`_pages/`](_pages/) | 八个主页面和 `404.md`；文件顶部 `permalink` 决定访问地址 | 修改页面文字时需要 |
-| [`_blogs/`](_blogs/) | 每篇博客一个 Markdown 文件；另有说明与模板 | 发博客需要 |
+| [`_blogs/`](_blogs/) | 每种语言一个 Markdown 文件；另有说明和中英文模板 | 发博客需要 |
 | [`_data/navigation.yml`](_data/navigation.yml) | 全站导航名称、顺序和链接 | 调整导航时需要 |
 | [`_data/news.yml`](_data/news.yml) | 全部新闻的唯一数据源 | 发 News 需要 |
 | [`assets/images/`](assets/images/) | 首页头像、Gallery 照片；新博客配图也可放这里 | 上传照片时需要 |
 | [`files/`](files/) | 当前真实 CV PDF；今后公开附件可放这里并加链接 | 换 CV/附件时需要 |
 | [`_layouts/researcher.html`](_layouts/researcher.html) | 通用 HTML 外壳、导航、页脚、CSS 和脚本引用 | 全站结构调整时才需要 |
-| [`_layouts/notebook.html`](_layouts/notebook.html) | 单篇博客的标题、日期、分类、摘要、正文与返回链接 | 博客版式调整时才需要 |
+| [`_layouts/notebook.html`](_layouts/notebook.html) | 单篇博客的标题、日期、分类、语言切换、摘要、正文与返回链接 | 博客版式调整时才需要 |
 | [`assets/css/researcher.css`](assets/css/researcher.css) | 字体、颜色、间距、相册比例、手机适配等样式 | 修改视觉风格时需要 |
-| [`assets/js/blog-filters.js`](assets/js/blog-filters.js) | 博客分类筛选 | 修改筛选逻辑时才需要 |
+| [`assets/js/blog-filters.js`](assets/js/blog-filters.js) | 博客分类与语言组合筛选、网址状态 | 修改筛选逻辑时才需要 |
+| [`_includes/blog-language.html`](_includes/blog-language.html)、[`_includes/blog-translations.html`](_includes/blog-translations.html) | 识别语言代码、关联中英文译文 | 修改双语功能时才需要 |
 | [`_config.yml`](_config.yml) | Jekyll 配置、博客集合、默认布局、排除项和插件 | 一般不用改 |
 | [`Gemfile`](Gemfile) | GitHub Pages/Jekyll 本地构建依赖 | 本地运行环境调整时使用 |
 | [`.gitignore`](.gitignore) | 防止生成文件与本地缓存进入版本管理 | 一般不用改 |
@@ -159,7 +160,7 @@
 
 ### 一篇可以照着写的示例
 
-1. 复制 [`_blogs/template.md`](_blogs/template.md) 的内容到本地新文件。
+1. 复制中文模板 [`_blogs/template.md`](_blogs/template.md)；写英文时复制 [`_blogs/template-en.md`](_blogs/template-en.md)。另存为本地新文件。
 2. 文件名例如 **`2026-11-12-my-first-note.md`**；日期加英文短标题方便分享。
 3. 修改文件顶部两行 `---` 之间的字段，然后写正文。下面这份可以直接作为个人随笔的起点：
 
@@ -169,6 +170,8 @@ layout: notebook
 title: "一次学习记录"
 date: 2026-11-12
 category: personal
+lang: zh-CN
+translation_key: my-first-note
 description: "记录今天的想法，以及下一步准备做什么。"
 published: true
 ---
@@ -194,7 +197,7 @@ published: true
 4. 上传这个新的 `.md` 到 [`_blogs/`](https://github.com/zjin73/zjin73.github.io/tree/master/_blogs)，提交到 `master`。
 5. 部署成功后，打开 [Blog](https://zjin73.github.io/blogs/)，在 All 和 Personal essays 中找到它。**不需要手动编辑博客列表页或导航。**
 
-模板文件 `template.md` 本身已在配置中排除，不会成为文章；必须另存新文件名。例子只是教程，不会自动发布到网站。
+`template.md`、`template-en.md` 和本目录的 `README.md` 都已在配置中排除，不会成为文章；必须另存新文件名。例子只是教程，不会自动发布到网站。
 
 ### 字段如何填写
 
@@ -204,6 +207,8 @@ published: true
 | `title` | 网页文章标题，用引号包住；文件名可以与标题不同 |
 | `date` | `YYYY-MM-DD`；列表按此字段从新到旧，而不是按上传时间或文件名排序 |
 | `category` | 只用 `personal`（个人随笔）或 `technology`（科技、控制、科研） |
+| `lang` | 中文用 `zh-CN`，英文用 `en`；决定语言筛选、页面语言和译文切换 |
+| `translation_key` | 同一篇文章的中英文用相同编号，不同文章用不同编号；单语文章可留空 |
 | `description` | 一两句话摘要；显示在列表和文章页，不会自动从正文截取 |
 | `published` | `true` 发表；`false` 不生成网站文章，但公开仓库中仍能看到源文件 |
 
@@ -231,14 +236,86 @@ print("Hello, control!")
 
 当前支持 Markdown 标题、列表、引用、表格和代码块；没有配置 MathJax/KaTeX，不能假设 LaTeX 公式会自动排成数学公式。后续需要数学渲染时应单独增加支持。
 
-### 中英两种文章如何处理
+### 分类和语言是两个独立筛选条件
 
-当前没有语言切换按钮，也不会因为添加 `lang` 字段就自动翻译或隐藏另一个语言。可以先上传两篇独立文章：
+Blog 顶部有两行按钮，可组合使用：
 
-- `2026-11-12-mpc-note-zh.md`，标题标注“（中文）”。
-- `2026-11-12-mpc-note-en.md`，标题标注“(English)”。
+| 筛选项 | 页面选项 | Markdown 字段 |
+| --- | --- | --- |
+| Category / 分类 | All / 全部、Personal essays / 随笔、Technology / 科技 | `category: personal` 或 `category: technology` |
+| Language / 语言 | All / 全部、中文、English | `lang: zh-CN` 或 `lang: en` |
 
-两篇都会出现在博客列表。中文正文顶部可写 `[English version](/blogs/2026-11-12-mpc-note-en/)`，英文正文顶部可写 `[中文版](/blogs/2026-11-12-mpc-note-zh/)`。只有另一篇也发布后，互相链接才有效。需要全站 EN/中文切换则是另一次功能改造。
+例如先选 Technology，再选中文，只显示中文技术文章；切换到 English 时保留当前分类。没有匹配文章时会明确提示。选择 All / 全部会解除对应这一项筛选，另一项保持不变。
+
+每种语言是一个独立 Markdown 文件，在 All / 全部中会分别显示。文章卡片上标明分类、语言和日期。筛选结果保存在网址的 `#category=technology&lang=zh-CN` 中，可复制链接；刷新和浏览器前进/后退可恢复相应选择。旧的 `#technology` / `#personal` 链接仍然有效。关闭 JavaScript 后仍能查看完整文章列表，文章内的译文链接也能使用。
+
+### 中英两版：两个文件，共用一个配对编号
+
+中文使用 [template.md](_blogs/template.md)，英文使用 [template-en.md](_blogs/template-en.md)。先另存为两个不同的新文件名，例如：
+
+- `2026-11-13-mpc-note-zh.md`
+- `2026-11-13-mpc-note-en.md`
+
+中文文件顶部：
+
+```yaml
+---
+layout: notebook
+title: "MPC 学习记录"
+date: 2026-11-13
+category: technology
+lang: zh-CN
+translation_key: mpc-note
+description: "关于模型预测控制的一些学习记录。"
+published: true
+---
+```
+
+英文文件顶部：
+
+```yaml
+---
+layout: notebook
+title: "Notes on Model Predictive Control"
+date: 2026-11-13
+category: technology
+lang: en
+translation_key: mpc-note
+description: "Learning notes on model predictive control."
+published: true
+---
+```
+
+分别把中文正文和英文正文写在各自第二条 `---` 后面，然后把两个文件上传到同一个 `_blogs/` 文件夹、提交到 `master`。中英文标题和摘要可以不同，建议分类和日期保持一致。**不需要修改导航、博客列表或手写译文链接。**
+
+`translation_key` 是配对编号，不是文件名。同一篇文章的两种语言必须完全一致；不同文章必须使用不同编号，例如 `mpc-note`、`payload-identification`。只用小写英文字母、数字、短横线最方便。同一个编号每种语言只能有一个已发表文件，不要把模板里的 `change-this-key` 原样用于多篇文章。
+
+部署后，文章标题下显示 **中文 / English** 切换按钮；当前语言高亮，另一种语言链接到对应已发表译文。中文页面的日期分类和返回链接也采用中文。此功能负责筛选和切换已有译文，**不会自动翻译正文，也不会自动翻译全站导航或其他页面**。
+
+### 只有中文版／英文版时怎么办
+
+只上传一种语言也可以正常发布和筛选；填好 `lang` 即可，`translation_key` 可先留空，或提前填写以后准备共用的编号。
+
+另一语言没有已发表的配对文章时，按钮置灰、不可点击，不会跳到错误页面。以后上传译文，用相同编号和另一 `lang`，并设置 `published: true`，切换链接就会自动出现。下架其中一版时，另一版的切换按钮会自动恢复为不可用。不要为了显示按钮上传空译文。
+
+兼容旧写法：`chinese` / `zh` / `zh-Hans` 识别为中文，`english` / `en-US` / `en-GB` 识别为英文；新文章统一写 `zh-CN` 或 `en`。缺少语言或填了无法识别的值时，文章标为“未设置语言”，只会出现在语言 All / 全部中。语言字段只声明正文语言，不能把中文正文标成英文来代替翻译。
+
+现有《AI冲击下的科研，我们应该关注什么？》及其英文版已通过 `translation_key: research-in-the-age-of-ai` 关联，原文件名、网址和正文保持不变。
+
+### 如果要手动改这个功能本身
+
+| 想改什么 | 修改文件 |
+| --- | --- |
+| 分类／语言按钮文字、文章列表标签 | `_pages/blogs.html` |
+| 两个筛选条件如何组合、网址中的筛选状态 | `assets/js/blog-filters.js` |
+| 语言代码兼容规则 | `_includes/blog-language.html` |
+| 译文如何配对、文章语言按钮 | `_includes/blog-translations.html` |
+| 文章标题、摘要、语言按钮的位置和返回链接 | `_layouts/notebook.html` |
+| 页面 `<html lang>`、脚本和样式的版本号 | `_layouts/researcher.html` |
+| 筛选按钮／切换按钮的样式、手机布局 | `assets/css/researcher.css` |
+| 模板排除规则 | `_config.yml` 的 `exclude` |
+
+日常发文只改文章 Markdown。只有新增第三个分类／第三种语言等功能改造，才需要同步修改上述对应文件；随便添加一个 `tags` 或新的 `lang` 值不会自动新增按钮。修改 JavaScript/CSS 后可更新通用布局中相应 `?v=` 版本号，减少旧缓存干扰。
 
 ### 编辑与删除旧文章
 
@@ -328,8 +405,12 @@ print("Hello, control!")
 
 | 现象 | 先检查什么 |
 | --- | --- |
-| 新博客没出现 | 文件是否在 `_blogs/`；后缀是否真的 `.md`；两条 `---` 是否齐全；`published: true`；是否仍叫被排除的 `template.md`；Actions 是否成功 |
-| 分类筛选找不到文章 | `category` 是否严格为 `personal` / `technology`，大小写和拼写是否一致 |
+| 新博客没出现 | 文件是否在 `_blogs/`；后缀是否真的 `.md`；两条 `---` 是否齐全；`published: true`；是否仍叫被排除的 `template.md` / `template-en.md`；Actions 是否成功 |
+| 分类筛选找不到文章 | `category` 是否严格为 `personal` / `technology`，以及当前语言筛选是否也匹配 |
+| 语言筛选找不到文章 | `lang` 是否为 `zh-CN` / `en`；先选语言 All 查看是否标为“未设置语言” |
+| 中英文切换按钮置灰 | 另一版本是否已上传到 `_blogs/`、`published: true`、`translation_key` 完全相同且语言不同 |
+| 中英文切换到了错误文章 | 不同文章是否误用了同一个 `translation_key`；每个配对编号每种语言只保留一篇 |
+| 切换语言后文字没有翻译 | 检查对应文件是否真正写了译文；此功能不自动翻译正文 |
 | 配图不显示 | 文件是否上传成功；`src`/Markdown 路径、大小写、扩展名是否完全一致；是否还在使用本地磁盘路径 |
 | Gallery 上传照片后无变化 | 是否同时在 `gallery.html` 添加了 `<figure>` |
 | News 构建失败 | YAML 是否使用空格、缩进是否正确、引号是否闭合 |

@@ -1,31 +1,32 @@
 # 博客文件夹 `_blogs`
 
-这是博客源文件目录，前面有下划线。网站列表地址为 [https://zjin73.github.io/blogs/](https://zjin73.github.io/blogs/)。
+网站列表：[Blog](https://zjin73.github.io/blogs/)。维护分支：**master**。
 
-1. 复制 [template.md](template.md) 到本地，另存为新文件，例如 `2026-11-12-my-first-note.md`。
-2. 修改标题、日期、摘要、分类和正文；分类只用 `personal`（个人随笔）或 `technology`（科技）。
-3. 写完把 `published: false` 改为 `published: true`。
-4. 在 GitHub 的本目录点 **Add file → Upload files**，上传新 `.md` 并提交到 `master`。
-5. 等 Pages 部署成功，博客列表会自动增加文章，不需要编辑列表页或导航。
+## 本地写文章，再手动上传
 
-```yaml
----
-layout: notebook
-title: "我的学习记录"
-date: 2026-11-12
-category: personal
-description: "一句话介绍文章。"
-published: true
----
-```
+1. 中文复制 [template.md](template.md)，英文复制 [template-en.md](template-en.md)。
+2. 另存新文件名，例如 `2026-11-13-mpc-note-zh.md` / `2026-11-13-mpc-note-en.md`。
+3. 修改标题、日期、摘要和正文，再填写以下字段。
+4. 写完把 `published: false` 改为 `published: true`。
+5. 在 GitHub 本目录点 **Add file → Upload files**，上传新的 `.md`，提交到 `master`。
+6. 等 Pages 部署成功，在 Blog 检查“分类 + 语言”筛选和文章中的译文切换。
 
-正文写在第二条 `---` 分隔线之后。标题由布局自动显示，正文的小标题从 `##` 开始即可。
+| 字段 | 填法 |
+| --- | --- |
+| `category` | `technology`（科技）或 `personal`（随笔） |
+| `lang` | 中文 `zh-CN`；英文 `en` |
+| `translation_key` | 同一篇中英文使用相同编号，例如 `mpc-note`；不同文章换不同编号 |
+| `published` | `true` 才发表；未公开稿件请留在本地 |
 
-- **发新文章：新文件名。改旧文章：保留旧文件名。** 同路径同名上传会替换该文章。
-- `template.md` 和本 `README.md` 已排除，不会变成文章。不能直接把文章写在 `template.md` 并期待发布。
-- 图片上传到 [`../assets/images/`](../assets/images/)，正文引用如 `![描述](/assets/images/2026-11-12-note-01.jpg)`。
+中英各一个文件，**文件名不同，配对编号相同，语言不同**。每个编号每种语言只放一个已发表版本。只有一种语言时也能发表，另一语言按钮不可点击；以后上传配对译文就会自动启用。系统不会自动翻译正文。
+
+筛选可以组合，例如 Technology + 中文；切换语言时保留分类。All / 全部中会分别列出各语言版本。旧的 `chinese` / `english` 写法继续兼容，建议新文章采用上表的标准写法。
+
+- 发新文用新文件名；改旧文保留原文件名。同路径同名上传只覆盖那个文件。
+- `template.md`、`template-en.md`、`README.md` 已排除，不会作为文章发布。
+- 图片上传到 `assets/images/`，正文引用如 `![说明](/assets/images/mpc-note-01.jpg)`。
+- `published: false` 只影响网页生成；公开仓库仍可查看源文件。
 - 文章按 `date` 从新到旧排列；未来日期不是定时发布。
-- `published: false` 只影响网站生成，公开仓库仍可看到源文件。
-- 中文和英文可以写两个独立 `.md`，通过正文链接互相跳转；当前没有自动语言切换功能。
+- 日常发文不需要改导航、列表页、JavaScript 或配置文件。
 
-完整示例、代码块、配图、上传步骤和故障排查：[返回 instruction.md](../instruction.md)。
+完整中英文示例、单语处理、上传步骤、功能文件对应关系与故障排查：[instruction.md 第 7 节](../instruction.md#7-blog本地写-markdown-并发布)。

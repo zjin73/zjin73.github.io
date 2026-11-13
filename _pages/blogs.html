@@ -5,17 +5,39 @@ permalink: /blogs/
 description: "Personal essays and notes on technology, control, and research by Zhiheng Jin."
 ---
 <header class="page-header"><h1 class="page-title">Blog</h1></header>
-<div class="blog-filters" role="group" aria-label="Filter by category" hidden>
-<button type="button" data-blog-filter="all" aria-pressed="true" aria-controls="blog-list">All</button>
-<button type="button" data-blog-filter="personal" aria-pressed="false" aria-controls="blog-list">Personal essays</button>
-<button type="button" data-blog-filter="technology" aria-pressed="false" aria-controls="blog-list">Technology</button>
+<div class="blog-filters" hidden>
+  <div class="blog-filter-row" role="group" aria-labelledby="blog-category-label">
+    <span class="blog-filter-label" id="blog-category-label">Category / 分类</span>
+    <div class="blog-filter-options">
+      <button type="button" data-blog-filter="all" aria-pressed="true" aria-controls="blog-list">All / 全部</button>
+      <button type="button" data-blog-filter="personal" aria-pressed="false" aria-controls="blog-list">Personal essays / 随笔</button>
+      <button type="button" data-blog-filter="technology" aria-pressed="false" aria-controls="blog-list">Technology / 科技</button>
+    </div>
+  </div>
+  <div class="blog-filter-row" role="group" aria-labelledby="blog-language-label">
+    <span class="blog-filter-label" id="blog-language-label">Language / 语言</span>
+    <div class="blog-filter-options">
+      <button type="button" data-blog-language="all" aria-pressed="true" aria-controls="blog-list">All / 全部</button>
+      <button type="button" data-blog-language="zh-CN" aria-pressed="false" aria-controls="blog-list" lang="zh-CN">中文</button>
+      <button type="button" data-blog-language="en" aria-pressed="false" aria-controls="blog-list" lang="en">English</button>
+    </div>
+  </div>
 </div>
+<p class="blog-filter-status" id="blog-filter-status" role="status" aria-live="polite" aria-atomic="true" hidden></p>
 <section id="blog-list" class="blog-list" aria-label="Blog entries">
-{% assign blog_posts = site.blogs | sort: 'date' | reverse %}
+{% assign blog_posts = site.blogs | where_exp: 'post', 'post.published != false' | sort: 'date' | reverse %}
 {% for post in blog_posts %}
 {% assign post_category = post.category | default: 'technology' %}
-<article class="paper blog-entry" data-category="{{ post_category | escape }}"><div class="blog-meta"><span class="blog-tag">{% if post_category == 'personal' %}Personal essays{% else %}Technology{% endif %}</span><time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%B %d, %Y' }}</time></div><h2><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>{% if post.description %}<p>{{ post.description | escape }}</p>{% endif %}</article>
+{% capture post_language %}{% include blog-language.html lang=post.lang %}{% endcapture %}
+<article class="paper blog-entry" data-category="{{ post_category | escape }}" data-language="{{ post_language }}">
+  <div class="blog-meta">
+    <span class="blog-tag">{% if post_category == 'personal' %}Personal essays / 随笔{% else %}Technology / 科技{% endif %}</span>
+    <span class="blog-language">{% if post_language == 'zh-CN' %}<span lang="zh-CN">中文</span>{% elsif post_language == 'en' %}English{% else %}Language not set / 未设置语言{% endif %}</span>
+    <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y-%m-%d' }}</time>
+  </div>
+  <h2 lang="{{ post_language }}"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
+  {% if post.description %}<p lang="{{ post_language }}">{{ post.description | escape }}</p>{% endif %}
+</article>
 {% endfor %}
 </section>
-<p class="empty-state" id="blog-empty" hidden>No posts in this category yet.</p>
-<p class="sr-only" id="blog-filter-status" role="status" aria-live="polite" aria-atomic="true"></p>
+<p class="empty-state" id="blog-empty" hidden>No posts match these filters. / 暂无符合这些条件的文章。</p>

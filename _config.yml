@@ -23,6 +23,7 @@ exclude:
   - Gemfile.lock
   - _blogs/README.md
   - _blogs/template.md
+  - _blogs/template-en.md
   - .bundle
   - vendor
   - node_modules

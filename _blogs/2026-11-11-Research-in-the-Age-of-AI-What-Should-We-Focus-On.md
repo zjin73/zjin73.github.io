@@ -4,7 +4,8 @@ title: "Research in the Age of AI: What Should We Focus On?"
 date: 2026-11-11
 category: technology
 description: "In less than a year, I have gone from a clumsy student who did everything by hand to a clumsy student who can use AI tools with ease. Research seems to have accelerated, yet many things have quietly undergone profound changes. AI has fundamentally reshaped the research paradigm—especially after the major development this October in which OpenAI solved the Navier–Stokes equations. So what should we be paying more attention to? And how will AI change our lives?"
-lang: english
+lang: en
+translation_key: research-in-the-age-of-ai
 published: true
 ---
 

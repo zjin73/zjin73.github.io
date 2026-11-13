@@ -1,6 +1,12 @@
 ---
 layout: researcher
 ---
-<header class="page-header"><div class="eyebrow">{% if page.category == 'personal' %}Personal essays{% else %}Technology{% endif %} · {{ page.date | date: '%B %d, %Y' }}</div><h1 class="page-title">{{ page.title | escape }}</h1>{% if page.description %}<p class="page-lead">{{ page.description | escape }}</p>{% endif %}</header>
-<article class="blog-content">{{ content }}</article>
-<p class="blog-back"><a href="{{ '/blogs/' | relative_url }}">← Back to Blog</a></p>
+{% capture notebook_language %}{% include blog-language.html lang=page.lang %}{% endcapture %}
+<header class="page-header">
+  <div class="eyebrow">{% if notebook_language == 'zh-CN' %}{% if page.category == 'personal' %}个人随笔{% else %}科技{% endif %}{% else %}{% if page.category == 'personal' %}Personal essays{% else %}Technology{% endif %}{% endif %} · {{ page.date | date: '%Y-%m-%d' }}</div>
+  <h1 class="page-title">{{ page.title | escape }}</h1>
+  {% include blog-translations.html %}
+  {% if page.description %}<p class="page-lead">{{ page.description | escape }}</p>{% endif %}
+</header>
+<article class="blog-content" lang="{{ notebook_language }}">{{ content }}</article>
+<p class="blog-back"><a href="{{ '/blogs/' | relative_url }}#category={{ page.category | default: 'technology' | escape }}&amp;lang={{ notebook_language }}">{% if notebook_language == 'zh-CN' %}← 返回博客列表{% else %}← Back to Blog{% endif %}</a></p>

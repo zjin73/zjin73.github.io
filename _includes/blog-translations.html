@@ -1,0 +1,22 @@
+{% assign chinese_version = nil %}
+{% assign english_version = nil %}
+{% if page.translation_key and page.translation_key != '' %}
+  {% for candidate in site.blogs %}
+    {% if candidate.published != false and candidate.translation_key == page.translation_key %}
+      {% capture candidate_language %}{% include blog-language.html lang=candidate.lang %}{% endcapture %}
+      {% if candidate_language == 'zh-CN' %}{% assign chinese_version = candidate %}{% endif %}
+      {% if candidate_language == 'en' %}{% assign english_version = candidate %}{% endif %}
+    {% endif %}
+  {% endfor %}
+{% endif %}
+{% if notebook_language == 'zh-CN' or notebook_language == 'en' %}
+<div class="translation-switch" role="group" aria-label="Article language / 文章语言">
+  <span class="translation-label">Language / 语言</span>
+  {% if notebook_language == 'zh-CN' %}<span class="translation-option" lang="zh-CN" aria-current="page">中文</span>
+  {% elsif chinese_version %}<a class="translation-option" href="{{ chinese_version.url | relative_url }}" hreflang="zh-CN" lang="zh-CN" rel="alternate">中文</a>
+  {% else %}<span class="translation-option unavailable" lang="zh-CN" aria-disabled="true" title="暂无中文版本 / Chinese version not available">中文<span class="sr-only">（暂无此版本）</span></span>{% endif %}
+  {% if notebook_language == 'en' %}<span class="translation-option" lang="en" aria-current="page">English</span>
+  {% elsif english_version %}<a class="translation-option" href="{{ english_version.url | relative_url }}" hreflang="en" lang="en" rel="alternate">English</a>
+  {% else %}<span class="translation-option unavailable" lang="en" aria-disabled="true" title="暂无英文版本 / English version not available">English<span class="sr-only"> (not available)</span></span>{% endif %}
+</div>
+{% endif %}
