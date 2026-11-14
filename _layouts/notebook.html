@@ -10,6 +10,7 @@ layout: researcher
   {% if page.description %}<p class="page-lead">{{ page.description | escape }}</p>{% endif %}
 </header>
 <article class="blog-content" lang="{{ notebook_language }}">{{ content }}</article>
+{% include blog-pdf.html %}
 <div class="blog-footer">
 {% include blog-translations.html %}
 <p class="blog-back"><a href="{{ '/blogs/' | relative_url }}#category={{ page.category | default: 'technology' | escape }}&amp;lang={{ notebook_language }}">{% if notebook_language == 'zh-CN' %}← 返回博客列表{% else %}← Back to Blog{% endif %}</a></p>

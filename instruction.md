@@ -210,6 +210,7 @@ published: true
 | `lang` | 中文用 `zh-CN`，英文用 `en`；决定语言筛选、页面语言和译文切换 |
 | `translation_key` | 同一篇文章的中英文用相同编号，不同文章用不同编号；单语文章可留空 |
 | `description` | 一两句话摘要；显示在列表和文章页，不会自动从正文截取 |
+| `pdf` | 可选；填写本站 PDF 路径，例如 `/assets/blog/mpc-report/paper.pdf`，自动生成预览与打开/下载入口 |
 | `published` | `true` 发表；`false` 不生成网站文章，但公开仓库中仍能看到源文件 |
 
 修改技术文章时把 `category` 改为 `technology`。现有筛选是两个固定分类，并不是自由标签系统；新增 `tags` 不会自动生成按钮。当前配置 `future: true`，**未来日期不是定时发布功能**，不要靠填未来日期隐藏稿件。未公开草稿建议留在本地。
@@ -235,6 +236,65 @@ print("Hello, control!")
 ````
 
 当前支持 Markdown 标题、列表、引用、表格和代码块；没有配置 MathJax/KaTeX，不能假设 LaTeX 公式会自动排成数学公式。后续需要数学渲染时应单独增加支持。
+
+### Markdown 配图、PDF 报告与混合文章（2026-11-14 更新）
+
+本节只适用于 `zjin73/zjin73.github.io`，发布分支为 `master`。
+
+| 用途 | 位置 |
+| --- | --- |
+| 中文 Markdown 模板 | `_blogs/template.md` |
+| 英文 Markdown 模板 | `_blogs/template-en.md` |
+| 中文 PDF 文章模板 | `_blogs/template-pdf.md` |
+| 英文 PDF 文章模板 | `_blogs/template-pdf-en.md` |
+| 某篇文章的图片 | `assets/blog/文章编号/images/` |
+| 某篇文章的完整 PDF | `assets/blog/文章编号/paper.pdf` |
+
+四个模板都被排除发布；复制模板后必须另存新文件名。普通文章不填写 `pdf`；PDF 文章填写该字段；混合文章可同时写 Markdown 正文、插图并附 PDF。原有 `assets/images/` 图片路径仍然可用，无需迁移旧图片。
+
+**配图示例：** 上传 `assets/blog/mpc-note/images/framework.png`，然后在 `_blogs/2026-11-14-mpc-note.md` 正文中写：
+
+```markdown
+![控制框架](/assets/blog/mpc-note/images/framework.png)
+```
+
+Markdown 只记录图片地址，不会把本地图片自动打包。必须把 `.md` 和图片分别上传到上述目录，保留目录层级。不要引用 `/Users/...`、`C:\\...` 或 `file:///...`。文件名大小写必须一致；推荐使用英文、数字、短横线，避免空格。网站会保持图片比例并适应手机宽度。
+
+**本地预览：** 上述 `/assets/...` 是网站根目录路径。部分 Markdown 编辑器直接打开单文件时无法解析它；应把完整网站仓库作为项目打开，并设置图片根目录为仓库根目录，或使用本文第 12 节的 Jekyll 本地预览。不要为临时本地预览把发布路径换成电脑绝对路径。网页文章的 URL 与 `_blogs/` 源文件路径不同，`../assets/...` 不一定在两处都有效。
+
+需要图注时可在正文写 HTML：
+
+```html
+<figure>
+  <img src="/assets/blog/mpc-note/images/framework.png" alt="控制框架的信号关系" loading="lazy">
+  <figcaption>图 1：控制框架。</figcaption>
+</figure>
+```
+
+**PDF 文章：** 在本地或 LaTeX 编辑器中编译好 PDF，上传 `assets/blog/mpc-report/paper.pdf`；再复制 PDF 模板为 `_blogs/2026-11-14-mpc-report-zh.md`，修改标题、摘要、日期及配对编号，确认如下字段：
+
+```yaml
+layout: notebook
+category: technology
+lang: zh-CN
+translation_key: mpc-report
+pdf: /assets/blog/mpc-report/paper.pdf
+published: true
+```
+
+保留模板顶部的两条 `---`。正文可以只写摘要，也可写完整的 Markdown 分析。网站会在正文下方显示 PDF 阅读区，在列表中标记 PDF，并保留顶部、底部的译文切换。直接打开与下载链接始终显示；浏览器不支持内嵌 PDF 或手机上不方便阅读时可使用它们。下载行为取决于浏览器设置，必要时在 PDF 阅读器里另存。这里的 `pdf` 推荐使用本网站以 `/` 开头的真实 PDF 路径。
+
+没有 PDF 就删除 `pdf` 字段或留空，不要填写示例路径。系统不会编译 `.tex`，也不会自动把 PDF 转成 Markdown。正常编译的 PDF 已包含配图，阅读时无需另外上传原图片；只有分享可重新编译的源码时，才需把 `.tex`、图片、`.bib` 等打包成 ZIP 并另外链接。
+
+中文和英文各写一个 Markdown 文件，仍使用同一个 `translation_key`，各自的 `lang` 不同。两篇可以引用不同的 `paper-zh.pdf` / `paper-en.pdf`；译文切换跳转至对应文章，不会翻译 PDF。只附同一个语言的 PDF 时应在摘要中说明。
+
+**发布顺序：** 先上传图片/PDF → 再上传或修改 Markdown → 提交到 `master` → 等 Actions 成功 → 检查列表、图片、PDF 打开/下载及中英文切换。也可以通过 Git 在一次提交中上传所有文件。仅上传附件不会自动创建博客条目。
+
+**更新文件：** 同路径同名上传会覆盖当前文件；如果浏览器仍显示旧 PDF，建议上传新文件名如 `paper-v2.pdf` 并同步修改文章 `pdf` 字段。删除文章不会自动删除附件；删除附件前确认没有其他文章引用。`published: false` 只控制文章是否生成，公开的附件和 Git 历史并不会因此变成私密。
+
+PDF 中的公式保持原排版；Markdown 网页仍未配置 MathJax/KaTeX，复杂数学推导可放在 PDF 中。
+
+实现对应：`_includes/blog-pdf.html` 控制 PDF 区域，`_layouts/notebook.html` 控制位置，`assets/css/researcher.css` 控制图片和阅读器样式，`_pages/blogs.html` 显示 PDF 标记，`_config.yml` 排除模板。日常发文不必修改这些实现文件。
 
 ### 分类和语言是两个独立筛选条件
 

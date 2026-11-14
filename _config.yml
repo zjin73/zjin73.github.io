@@ -24,6 +24,9 @@ exclude:
   - _blogs/README.md
   - _blogs/template.md
   - _blogs/template-en.md
+  - _blogs/template-pdf.md
+  - _blogs/template-pdf-en.md
+  - assets/blog/README.md
   - .bundle
   - vendor
   - node_modules

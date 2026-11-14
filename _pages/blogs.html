@@ -36,6 +36,7 @@ description: "Personal essays and notes on technology, control, and research by 
     <span class="blog-language">{% if post_language == 'zh-CN' %}<span lang="zh-CN">中文</span>{% elsif post_language == 'en' %}English{% else %}Language not set / 未设置语言{% endif %}</span>
     <time datetime="{{ post.date | date: '%Y-%m-%d' }}">{{ post.date | date: '%Y-%m-%d' }}</time>
   </div>
+  {% assign post_pdf = post.pdf | default: '' | strip %}{% if post_pdf != '' %}<span class="blog-format">PDF</span>{% endif %}
   <h2 lang="{{ post_language }}"><a href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h2>
   {% if post.description %}<p lang="{{ post_language }}">{{ post.description | escape }}</p>{% endif %}
   {% include blog-translations.html post=post compact=true %}

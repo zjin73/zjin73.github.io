@@ -7,6 +7,8 @@ lang: zh-CN
 translation_key: change-this-key
 description: "用一句话介绍这篇文章。"
 published: false
+# Optional PDF / 可选 PDF；上传真实文件后再取消下一行注释
+# pdf: /assets/blog/my-note/paper.pdf
 ---
 
 <!-- 另存为新文件，例如 2026-11-13-my-note-zh.md。template.md 不参与发布。
@@ -24,3 +26,7 @@ category: technology（科技）或 personal（随笔）。
 
 - 第一点
 - 第二点
+
+<!-- 先上传真实图片，再取消注释并替换下面的路径。
+![Figure / 图片说明](/assets/blog/my-note/images/framework.png)
+-->

@@ -1,0 +1,14 @@
+{% assign blog_pdf = page.pdf | default: '' | strip %}
+{% if blog_pdf != '' %}
+<section class="blog-pdf" aria-labelledby="blog-pdf-heading">
+  <h2 id="blog-pdf-heading">{% if notebook_language == 'zh-CN' %}PDF 全文{% else %}Full document (PDF){% endif %}</h2>
+  <div class="blog-pdf-actions">
+    <a href="{{ blog_pdf | relative_url | escape }}" target="_blank" rel="noopener">{% if notebook_language == 'zh-CN' %}在新窗口打开 PDF{% else %}Open PDF in a new tab{% endif %}</a>
+    <a href="{{ blog_pdf | relative_url | escape }}" download>{% if notebook_language == 'zh-CN' %}下载 PDF{% else %}Download PDF{% endif %}</a>
+  </div>
+  <p class="blog-pdf-note">{% if notebook_language == 'zh-CN' %}若下方无法预览，或手机上阅读不便，请使用上方链接打开或下载。{% else %}If the preview is unavailable or difficult to read on your phone, open or download the PDF above.{% endif %}</p>
+  <object class="blog-pdf-viewer" data="{{ blog_pdf | relative_url | escape }}" type="application/pdf" aria-label="{{ page.title | escape }} — PDF">
+    <p>{% if notebook_language == 'zh-CN' %}此浏览器未显示 PDF。{% else %}This browser could not display the PDF.{% endif %} <a href="{{ blog_pdf | relative_url | escape }}">{% if notebook_language == 'zh-CN' %}打开 PDF 全文{% else %}Open the full PDF{% endif %}</a></p>
+  </object>
+</section>
+{% endif %}

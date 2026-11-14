@@ -30,3 +30,13 @@
 - 日常发文不需要改导航、列表页、JavaScript 或配置文件。
 
 完整中英文示例、单语处理、上传步骤、功能文件对应关系与故障排查：[instruction.md 第 7 节](../instruction.md#7-blog本地写-markdown-并发布)。
+
+## 图片与 PDF
+
+普通图文沿用 template.md / template-en.md；PDF 报告使用 [template-pdf.md](template-pdf.md) / [template-pdf-en.md](template-pdf-en.md)，另存新文件名后再发布。
+
+- 图片放 `assets/blog/文章编号/images/`，正文使用 `![说明](/assets/blog/文章编号/images/真实文件.png)`。图片必须一起上传，电脑绝对路径不能用于网站。
+- PDF 放 `assets/blog/文章编号/paper.pdf`，文章 front matter 添加 `pdf: /assets/blog/文章编号/paper.pdf`。正文写摘要或完整分析；PDF 自动显示在正文下方，带打开和下载入口。列表自动标记 PDF。
+- 不附 PDF 时删除 pdf 字段或留空。中英文文章仍分别填写 lang，共用 translation_key；各自可引用对应语言的 PDF。
+- 四个模板均已排除发布，不会显示为正式文章。
+- 本地预览、上传顺序、LaTeX 编译、手机兼容与缓存处理见 [instruction.md 第 7 节](../instruction.md#7-blog本地写-markdown-并发布)。
